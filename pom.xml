@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>emp_timerecords_master</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>emp_timerecords</artifactId>
+	<version>0.1.1</version>
 	<packaging>jar</packaging>
 
 	<name>emp_timerecords_master</name>
@@ -21,7 +21,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<ch.qos.logback.version>1.1.6</ch.qos.logback.version>
 		<java.version>1.8</java.version>
+		<docker.image.prefix>leanarch</docker.image.prefix>
 	</properties>
 
 	<dependencies>
@@ -76,25 +78,9 @@
 		<dependency>
     	 <groupId>org.springframework.cloud</groupId>
    		  <artifactId>spring-cloud-starter-feign</artifactId> 
-		</dependency> 
-		<!-- SWAGGER Dependencies START -->
-        <dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger2</artifactId>
-		   <version>2.6.1</version>
-		  </dependency>
-		  
-		  <dependency>
-		   <groupId>com.fasterxml.jackson.core</groupId>
-		   <artifactId>jackson-databind</artifactId>
-		   <version>2.5.0</version>
-		  </dependency>
-		  <dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger-ui</artifactId>
-		   <version>2.6.1</version>
-		  </dependency>
-		 <!-- SWAGGER Dependencies STOP -->
+   	 	
+		</dependency>
+		
 			
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -121,31 +107,37 @@
 		<dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
+            <version>${ch.qos.logback.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
+            <version>${ch.qos.logback.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-access</artifactId>
+            <version>${ch.qos.logback.version}</version>
             <optional>true</optional>
         </dependency>
-        
+        <dependency>
+		   <groupId>io.springfox</groupId>
+		   <artifactId>springfox-swagger2</artifactId>
+		   <version>2.6.1</version>
+		  </dependency>
 		  
-		  <!-- JMETER DEPENDENCY -->
-		  <!-- <dependency> 
-	       <groupId>org.testng</groupId> 
-	       <artifactId>testing</artifactId> 
-	       <version>6.1.1</version> 
-	     </dependency> 
-	     <dependency> 
-	       <groupId>org.wso2.carbon.automation</groupId> 
-	       <artifactId>org.wso2.carbon.automation.extensions</artifactId> 
-	       <version>4.3.0</version> 
-	     </dependency> -->
-		
+		  <dependency>
+		   <groupId>com.fasterxml.jackson.core</groupId>
+		   <artifactId>jackson-databind</artifactId>
+		   <version>2.5.0</version>
+		  </dependency>
+		  <dependency>
+		   <groupId>io.springfox</groupId>
+		   <artifactId>springfox-swagger-ui</artifactId>
+		   <version>2.6.1</version>
+		  </dependency>
+		  
 	</dependencies>
 	
 	<dependencyManagement>
@@ -166,22 +158,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!--  <plugin> 
-		         <artifactId>maven-surefire-plugin</artifactId> 
-		         <version>2.12.3</version> 
-		         <inherited>false</inherited> 
-		         <configuration> 
-		           <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=128m</argLine> 
-		           <testFailureIgnore>true</testFailureIgnore> 
-		           <disableXmlReport>false</disableXmlReport> 
-		           <parallel>false</parallel> 
-		           <includes> 
-		             <include>**/*TestCase.java</include> 
-		           </includes> 
-		         </configuration> 
-       </plugin>  -->
-		</plugins>
-	</build>
+			<plugin>
+	            <groupId>com.spotify</groupId>
+	            <artifactId>docker-maven-plugin</artifactId>
+	            <version>0.4.11</version>
+            <configuration>
+                <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                <dockerDirectory>src/main/docker</dockerDirectory>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>${project.build.finalName}.jar</include>
+                    </resource>
+                </resources>
+            </configuration>
+        </plugin>
+	</plugins>
+  </build>
 
 
 </project>

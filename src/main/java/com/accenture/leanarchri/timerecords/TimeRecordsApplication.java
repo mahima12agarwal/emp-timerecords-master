@@ -44,80 +44,65 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableResourceServer
 @SpringBootApplication
-//@SpringBootApplication(scanBasePackages = { "com.accenture.leanarchri.timerecords","com.accenture.leanarchri.timerecords.client" })
+// @SpringBootApplication(scanBasePackages = {
+// "com.accenture.leanarchri.timerecords","com.accenture.leanarchri.timerecords.client"
+// })
 public class TimeRecordsApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(TimeRecordsApplication.class);
-	
-	
+
 	@Configuration
 	protected static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
-	    @Override
-	    public void configure(HttpSecurity http) throws Exception {
-	    
-			 http
-	            .authorizeRequests().antMatchers("/hystrix.stream").permitAll()
-			.and()
-	   
-	            .authorizeRequests().anyRequest().authenticated();
-	    
-	}
-	    
-}
-	 @Bean
-	    public FilterRegistrationBean correlationHeaderFilter() {
-	        FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
-	        filterRegBean.setFilter(new CorrelationHeaderFilter());
-	        filterRegBean.setUrlPatterns(Arrays.asList("/*"));
+		@Override
+		public void configure(HttpSecurity http) throws Exception {
+			http.authorizeRequests().antMatchers("/hystrix.stream").permitAll().and()
+					.authorizeRequests().anyRequest().authenticated();
 
-	        return filterRegBean;
-	 }
+		}
+
+	}
+
+	@Bean
+	public FilterRegistrationBean correlationHeaderFilter() {
+		FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
+		filterRegBean.setFilter(new CorrelationHeaderFilter());
+		filterRegBean.setUrlPatterns(Arrays.asList("/*"));
+
+		return filterRegBean;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(TimeRecordsApplication.class, args);
 	}
-	
+
 	@Bean
 	public Docket newAPITimeRecords() {
-	        return new Docket(DocumentationType.SWAGGER_2)
-	        		
-	        		.groupName("timerecords")
-	        		.apiInfo(apiInfo())
-	                .select()
-	                .paths(regex("/timerecords.*"))
-	                //.apis(RequestHandlerSelectors.basePackage(ChargeCodeMasterController.class.getPackage().getName()))
-	                .build();
-	               // .tags(new Tag("Pet Service", "All apis relating to pets"));
-	        		// .useDefaultResponseMessages(false)
-	            //.apiInfo(apiInfo())
-	            //.select()
-	            //.paths(regex("/greeting.*"))
-	            //.paths(Predicates.not(PathSelectors.regex("/error.*")))
-	            //.build();             
-	   }
+		return new Docket(DocumentationType.SWAGGER_2)
+
+				.groupName("timerecords").apiInfo(apiInfo()).select().paths(regex("/timerecords.*")).build();
+	}
+
 	@Component
 	@Primary
 	public class CustomObjectMapper extends ObjectMapper {
-	    public CustomObjectMapper() {
-	        setSerializationInclusion(JsonInclude.Include.NON_NULL);
-	        configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-	        configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-	        configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-	        enable(SerializationFeature.INDENT_OUTPUT);
-	    }
+		public CustomObjectMapper() {
+			setSerializationInclusion(JsonInclude.Include.NON_NULL);
+			configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+			configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+			configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			enable(SerializationFeature.INDENT_OUTPUT);
+		}
 	}
 
-
 	private ApiInfo apiInfo() {
-	        return new ApiInfoBuilder()
-	            .title("Employee time records")
-	            .description("This API is for fetching the employee timerecords for a spcific or last fortnight.")
-	            .version("1.0")
-	            .contact(new Contact("ATA Lean Architecture Team", "", "ATA.Lean.Arch.Group@accenture.com"))
-	             //.contact("ATA Lean Architecture Team")
-	            .license("Accenture License Version")
-	            //.licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")
-	             .build();
-	    }
+		return new ApiInfoBuilder().title("Employee time records")
+				.description("This API is for fetching the employee timerecords for a spcific or last fortnight.")
+				.version("1.0")
+				.contact(new Contact("ATA Lean Architecture Team", "", "ATA.Lean.Arch.Group@accenture.com"))
+				// .contact("ATA Lean Architecture Team")
+				.license("Accenture License Version")
+				// .licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")
+				.build();
+	}
 }

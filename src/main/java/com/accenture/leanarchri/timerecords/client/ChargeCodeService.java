@@ -22,7 +22,7 @@ public interface ChargeCodeService {
 	@RequestMapping(value = "/chargecodes/{wbs}/employees/{empid}",  method = RequestMethod.GET)
     ChargeCode  getChargeCodeDetailsOfAnEmployee(@PathVariable("wbs") String wbs,@PathVariable("empid") Integer empid);
 	
-	@RequestMapping(value = "/chargecodes/{chargecodes}", method = RequestMethod.GET)
+	@RequestMapping(value = "/chargecodes/{wbs}", method = RequestMethod.GET)
 	public Collection<ChargeCode>  getChargeCodes(@RequestHeader("correlationId") String correlationId,@PathVariable("chargecodes") String[] chargeCodes);
 
 }
