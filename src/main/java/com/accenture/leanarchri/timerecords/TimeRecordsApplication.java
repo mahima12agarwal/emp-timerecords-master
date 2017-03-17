@@ -1,5 +1,7 @@
 package com.accenture.leanarchri.timerecords;
 
+import static springfox.documentation.builders.PathSelectors.regex;
+
 import java.util.Arrays;
 
 import org.slf4j.Logger;
@@ -13,6 +15,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
@@ -20,7 +23,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.accenture.leanarchri.utils.CorrelationHeaderFilter;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Component
@@ -66,7 +78,7 @@ public class TimeRecordsApplication {
 		SpringApplication.run(TimeRecordsApplication.class, args);
 	}
 	
-	/*@Bean
+	@Bean
 	public Docket newAPITimeRecords() {
 	        return new Docket(DocumentationType.SWAGGER_2)
 	        		
@@ -107,5 +119,5 @@ public class TimeRecordsApplication {
 	            .license("Accenture License Version")
 	            //.licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")
 	             .build();
-	    }*/
+	    }
 }
