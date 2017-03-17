@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
 import com.accenture.leanarchri.timerecords.service.TimeRecordsService;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 /**
@@ -25,6 +26,7 @@ import io.swagger.annotations.ApiOperation;
  *
  */
 @RestController
+//@Api(tags = "Employee Timerecords API")
 public class TimeRecordsController {
 	
 
@@ -40,7 +42,7 @@ public class TimeRecordsController {
 	 * @return: Collection<EmployeeAttendance>
 	 */
 	@RequestMapping(value = "/timerecords/{empId}", method=RequestMethod.GET)
-    @ApiOperation(value = "GetEmployeeTimerecords", nickname = "GetEmployeeTimerecords") 
+    //@ApiOperation(value = "GetEmployeeTimerecords", nickname = "GetEmployeeTimerecords") 
 	public Collection<EmployeeTimerecords> getEmployeeAttendance(@PathVariable("empId") Integer id){
 		log.debug("AttendanceController ::: getEmployeeAttendance ::: START");
 		Collection<EmployeeTimerecords> employeeAttendance = new ArrayList<>();
@@ -54,7 +56,7 @@ public class TimeRecordsController {
 	 * @return: Collection<EmployeeAttendance>
 	 */
 	@RequestMapping(value = "/timerecords", method = RequestMethod.GET)
-	@ApiOperation(value = "GetAllEmployeeTimerecords", nickname = "GetAllEmployeeTimerecords") 
+	//@ApiOperation(value = "GetAllEmployeeTimerecords", nickname = "GetAllEmployeeTimerecords") 
 	public Collection<EmployeeTimerecords> getEmployeeAttendance(){
 		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: START");
 		Collection<EmployeeTimerecords> employeeAttendance = new ArrayList<EmployeeTimerecords>();
@@ -65,6 +67,7 @@ public class TimeRecordsController {
 	}
 	
 	@RequestMapping(value = "/timerecords/submit", method=RequestMethod.POST)
+	//@ApiOperation(value = "SubmitEmployeeTimerecords", nickname = "SubmitEmployeeTimerecords")
 	public Boolean submitEmployeeAttanceService(@RequestBody EmployeeTimerecords employeeTimerecords){
 		
 		Boolean submitStatus = timeRecordsService.submitEmployeeTimerecords(employeeTimerecords);
