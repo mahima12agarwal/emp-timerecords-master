@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>emp_timerecords_version</artifactId>
+	<artifactId>emp_timerecords_v</artifactId>
 	<version>0.1.2</version>
 	<packaging>jar</packaging>
 
