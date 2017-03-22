@@ -56,7 +56,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		String correlationId = Correlation.getId();
 		log.info("getCalculateAttendanceEmployee::: empId: "+empId);
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, empId);
-        log.info("Employee Details :"+employeeDetails.toString());
+        log.debug("Employee Details :"+employeeDetails.toString());
 		if(employeeDetails != null){
 			log.debug("Service:: EmployeeId passed: "+empId);
 			 employeeTimerecords = timerecordsRepository.findByEmployeeId(empId);
@@ -79,7 +79,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	
 	@HystrixCommand(fallbackMethod="handleGetCalculateAttendanceEmployees")
 	public Collection<EmployeeTimerecords> getCalculateAttendanceEmployees(){
-		log.debug("Attendance Calculator::: getCalculateAttendanceEmployees::: Start");
+		log.info("Attendance Calculator::: getCalculateAttendanceEmployees::: Start");
 		Collection<EmployeeTimerecords>  employeesTimerecords = new ArrayList<>();
 		employeesTimerecords = (Collection<EmployeeTimerecords>) timerecordsRepository.findAll();
 		log.debug("received from bd: "+employeesTimerecords.toString());
@@ -100,12 +100,13 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		String[] chargeCodeList;
 		Boolean validateTR = false;
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, employeeTimerecords.getEmployeeId());
-        log.debug("Employee Details :"+employeeDetails.toString());
+        log.info("Employee Details :"+employeeDetails.toString());
         Boolean submitStatus = false;
         
         if(employeeDetails != null){
-        	log.info("Checking charge code");
+        	log.debug("Checking charge code");
         	chargeCodeList = getChargeCodeList(employeeTimerecords);
+        	log.debug("chargeCodeList: "+chargeCodeList.length);
         	chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
         	log.debug("Chargecode lis: "+chareCodeEntityList.toString());
         	EmployeeTimerecords empTimerecords;

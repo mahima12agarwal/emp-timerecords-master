@@ -44,9 +44,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableResourceServer
 @SpringBootApplication
-// @SpringBootApplication(scanBasePackages = {
-// "com.accenture.leanarchri.timerecords","com.accenture.leanarchri.timerecords.client"
-// })
 public class TimeRecordsApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(TimeRecordsApplication.class);

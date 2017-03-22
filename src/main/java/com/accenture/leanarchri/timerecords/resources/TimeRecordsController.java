@@ -66,10 +66,10 @@ public class TimeRecordsController {
 		return	employeeAttendance;
 	}
 	
-	@RequestMapping(value = "/timerecords/submit", method=RequestMethod.POST)
+	@RequestMapping(value = "/timerecords", method=RequestMethod.POST)
 	//@ApiOperation(value = "SubmitEmployeeTimerecords", nickname = "SubmitEmployeeTimerecords")
 	public Boolean submitEmployeeAttanceService(@RequestBody EmployeeTimerecords employeeTimerecords){
-		
+		log.debug("submitEmployeeAttanceService ::: POST: Request: "+employeeTimerecords.toString());
 		Boolean submitStatus = timeRecordsService.submitEmployeeTimerecords(employeeTimerecords);
 		return submitStatus;
 	}
