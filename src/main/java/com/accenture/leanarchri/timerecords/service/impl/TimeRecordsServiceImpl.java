@@ -94,19 +94,22 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	
 	@HystrixCommand(fallbackMethod="handleTimerecordSubmitFailure")
 	public Boolean submitEmployeeTimerecords(EmployeeTimerecords employeeTimerecords){
-		
+		log.info("submitEmployeeTimerecords ::: STARt");
 		String correlationId = Correlation.getId();
 		Collection<ChargeCode> chareCodeEntityList = new ArrayList<>();
 		String[] chargeCodeList;
 		Boolean validateTR = false;
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, employeeTimerecords.getEmployeeId());
-        log.info("Employee Details :"+employeeDetails.toString());
+        log.debug("Employee Details :"+employeeDetails.toString());
         Boolean submitStatus = false;
         
         if(employeeDetails != null){
         	log.debug("Checking charge code");
         	chargeCodeList = getChargeCodeList(employeeTimerecords);
         	log.debug("chargeCodeList: "+chargeCodeList.length);
+        	log.debug("connecting to chargecodes");
+        	/*ChargeCode ch = chargeCodeService.getChargeCodeDetails("AAAAA");
+        	log.info("charge code: "+ch.toString());*/
         	chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
         	log.debug("Chargecode lis: "+chareCodeEntityList.toString());
         	EmployeeTimerecords empTimerecords;
@@ -127,19 +130,19 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         			}
         			
         		}else{
-        			log.debug("Validation faile: Date format is wrong or Hours submitted are not valid");
+        			log.info("Validation faile: Date format is wrong or Hours submitted are not valid");
         		}
         	}else{
-        		log.debug("Chargecodes submitted are not valid.");
+        		log.info("Chargecodes submitted are not valid.");
         	}
         }else{
-        	log.debug("Employee is not valid.");
+        	log.info("Employee is not valid.");
         }
 		return submitStatus;
 	}
 	
 	public Boolean handleTimerecordSubmitFailure(EmployeeTimerecords employeeTimerecords){
-		log.debug("Employee failed to submit the timerecord: "+employeeTimerecords.getEmployeeId());
+		log.info("Employee failed to submit the timerecord: "+employeeTimerecords.getEmployeeId());
 		return false;
 	}
 	
@@ -178,14 +181,14 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		return chargeCodeList;
 	}
 	
-	@Override
+	/*@Override
 	@HystrixCommand(fallbackMethod="handleGetChargeCodeDetails")
 	public ChargeCode getChargeCodeDetails(String wbs) {
 	
 		ChargeCode chargeCode=chargeCodeService.getChargeCodeDetails(wbs);
 		
 		return	chargeCode;
-	}
+	}*/
 	
 	/*
 	 *  hystrix circuitbreaker fallbackMethod for getChargeCodeDetails
@@ -200,7 +203,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		return	chargeCode;
 	}
 
-	@Override
+	/*@Override
 	@HystrixCommand(fallbackMethod="handleGetChargeCodeDetailsOfAnEmployee")
 	public ChargeCode getChargeCodeDetailsOfAnEmployee(String wbs, Integer empid) {
 		
@@ -208,7 +211,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		ChargeCode chargeCode=chargeCodeService.getChargeCodeDetailsOfAnEmployee(wbs, empid);
 		
 		return	chargeCode;
-	}
+	}*/
 	
 	/*
 	 *  hystrix circuitbreaker fallbackMethod for getChargeCodeDetailsOfAnEmployee
@@ -222,7 +225,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		return	chargeCode;
 	}
 	
-	@Override
+/*	@Override
 	@HystrixCommand(fallbackMethod="handleGetEmployeeAssignment")
 	public EmployeeAssignments getEmployeeAssignment(Integer id){
 		
@@ -231,7 +234,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		return employeeAssignments;
 		
 	}
-	
+	*/
 	/*
 	 *  hystrix circuitbreaker fallbackMethod for handleGetEmployeeAssignment
 	 */
@@ -260,7 +263,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		
 	}
 	
-	@Override
+	/*@Override
 	@HystrixCommand(fallbackMethod="handleGetEmployeeDetails")
 	public EmployeeDetails getEmployeeDetails(long id){
 		
@@ -268,7 +271,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		
 		return employeeDetails;
 		
-	}
+	}*/
 	
 	/*
 	 *  hystrix circuitbreaker fallbackMethod for getEmployeeDetails
@@ -285,7 +288,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	}
 	
 	
-	@Override
+	/*@Override
 	@HystrixCommand(fallbackMethod="handleGetAllEmployees")
 	public List<EmployeeDetails> getAllEmployees(){
 		
@@ -294,7 +297,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		return employeeDetailsList;
 		
 	}
-	
+	*/
 	/*
 	 *  hystrix circuitbreaker fallbackMethod for getEmployeeDetails
 	 */

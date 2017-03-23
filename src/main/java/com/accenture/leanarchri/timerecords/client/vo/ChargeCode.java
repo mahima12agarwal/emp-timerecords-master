@@ -13,6 +13,23 @@ public class ChargeCode {
 	private String status;
 	
 	private Collection<Employee> authorizedEmployees;
+	
+	
+
+
+	public ChargeCode(String chargeCode, String engagement, String company, String status,
+			Collection<Employee> authorizedEmployees) {
+		super();
+		this.chargeCode = chargeCode;
+		this.engagement = engagement;
+		this.company = company;
+		this.status = status;
+		this.authorizedEmployees = authorizedEmployees;
+	}
+	
+
+	public ChargeCode() {
+	}
 
 
 	public String getChargeCode() {
@@ -53,6 +70,15 @@ public class ChargeCode {
 
 	public void setAuthorizedEmployees(Collection<Employee> authorizedEmployees) {
 		this.authorizedEmployees = authorizedEmployees;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ChargeCode [chargeCode=" + chargeCode + ", engagement=" + engagement + ", company=" + company
+				+ ", status=" + status + ", authorizedEmployees=" + authorizedEmployees + "]";
 	}
 	
 	

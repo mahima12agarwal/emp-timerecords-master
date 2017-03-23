@@ -16,13 +16,13 @@ import com.accenture.leanarchri.timerecords.client.vo.ChargeCode;
 @SpringBootApplication
 public interface ChargeCodeService {
 	
-	@RequestMapping(value = "/chargecodes/{wbs}",  method = RequestMethod.GET)
-	ChargeCode  getChargeCodeDetails(@PathVariable("wbs") String wbs);
+	/*@RequestMapping(value = "/chargecodes/{wbs}",  method = RequestMethod.GET)
+	ChargeCode  getChargeCodeDetails(@PathVariable("wbs") String wbs);*/
 	
 	@RequestMapping(value = "/chargecodes/{wbs}/employees/{empid}",  method = RequestMethod.GET)
     ChargeCode  getChargeCodeDetailsOfAnEmployee(@PathVariable("wbs") String wbs,@PathVariable("empid") Integer empid);
 	
-	@RequestMapping(value = "/chargecodes/{wbs}", method = RequestMethod.GET)
+	@RequestMapping(value = "/chargecodes/{chargecodes}", method = RequestMethod.GET)
 	public Collection<ChargeCode>  getChargeCodes(@RequestHeader("correlationId") String correlationId,@PathVariable("chargecodes") String[] chargeCodes);
 
 }

@@ -2,10 +2,7 @@ package com.accenture.leanarchri.timerecords;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -15,16 +12,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.RestTemplate;
 
 import com.accenture.leanarchri.timerecords.client.EmployeeDetailsService;
 import com.accenture.leanarchri.timerecords.client.vo.EmployeeDetails;
 import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
-import com.accenture.leanarchri.timerecords.domain.Timerecord;
 import com.accenture.leanarchri.timerecords.repository.TimerecordsRepository;
 import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
 
@@ -44,7 +36,7 @@ public class TimerecordsServiceTest {
 	
 	@MockBean
 	private EmployeeDetailsService employeeDetailsService;
-	
+	@MockBean
 	private TimerecordsRepository timerecordsRepository;
 	
 	/*@MockBean
@@ -65,12 +57,13 @@ public class TimerecordsServiceTest {
 		
 		//Collection<EmployeeTimerecords> employeeTimerecords = new ArrayList<>();
 		//employeeTimerecords.add(new EmployeeTimerecords(1, 1000, null));
-	/*	List<EmployeeTimerecords> employeeAttendance=Arrays.asList(new EmployeeTimerecords(1, 1000, null));
+		List<EmployeeTimerecords> employeeTimerecords=Arrays.asList(new EmployeeTimerecords(1000, 1000, null));
 		EmployeeDetails employeeDetails = new EmployeeDetails("Amith", "Bhandari",55,"Bangalore", "amith@gmail.com", 1000);
 		given(this.employeeDetailsService.getEmployeeDetails("Ti8776652",1000)).willReturn(employeeDetails);
-		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeAttendance);
+		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeTimerecords);
 		Collection<EmployeeTimerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
-		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);*/
+		//System.out.println("employeeId :  "+ result.);
+		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);
 		
 		
 	}
