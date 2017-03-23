@@ -104,14 +104,14 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         Boolean submitStatus = false;
         
         if(employeeDetails != null){
-        	log.debug("Checking charge code");
+        	log.info("Checking charge code");
         	chargeCodeList = getChargeCodeList(employeeTimerecords);
-        	log.debug("chargeCodeList: "+chargeCodeList.length);
+        	log.info("chargeCodeList: "+chargeCodeList.length);
         	log.debug("connecting to chargecodes");
         	/*ChargeCode ch = chargeCodeService.getChargeCodeDetails("AAAAA");
         	log.info("charge code: "+ch.toString());*/
         	chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
-        	log.debug("Chargecode lis: "+chareCodeEntityList.toString());
+        	log.info("Chargecode lis: "+chareCodeEntityList.toString());
         	EmployeeTimerecords empTimerecords;
         	//ChargeCode charc = chargeCodeService.getChargeCodeDetails("AAAAA");
         	//chareCodeEntityList.add(charc);
@@ -120,9 +120,9 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         		if(validateTR){
         			empTimerecords = constructEmployeeTimerecord(employeeTimerecords.getEmployeeId(), employeeTimerecords.getTimerecord());
         			EmployeeTimerecords employeeAttenanceSaved = timerecordsRepository.save(empTimerecords);
-        			log.debug("Constructred timerecord: "+employeeTimerecords.toString());
-        			log.debug("Request :: Timerecord: "+empTimerecords.toString());
-        			log.debug("Saved timerecords: "+employeeAttenanceSaved);
+        			log.info("Constructred timerecord: "+employeeTimerecords.toString());
+        			log.info("Request :: Timerecord: "+empTimerecords.toString());
+        			log.info("Saved timerecords: "+employeeAttenanceSaved);
         			if(employeeAttenanceSaved.toString().equals(empTimerecords.toString())){
         				submitStatus = true;
         			}else{
