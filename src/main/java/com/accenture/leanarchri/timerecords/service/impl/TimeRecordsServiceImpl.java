@@ -54,13 +54,13 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	public Collection<EmployeeTimerecords> getCalculateAttendanceEmployee(Integer empId){
 		Collection<EmployeeTimerecords> employeeTimerecords = new ArrayList<>();
 		String correlationId = Correlation.getId();
-		log.info("getCalculateAttendanceEmployee::: empId: "+empId);
+		log.debug("getCalculateAttendanceEmployee::: empId: "+empId);
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, empId);
-        log.debug("Employee Details :"+employeeDetails.toString());
+        log.debug("Employee Details got from mock obj :"+employeeDetails.toString());
 		if(employeeDetails != null){
 			log.debug("Service:: EmployeeId passed: "+empId);
 			 employeeTimerecords = timerecordsRepository.findByEmployeeId(empId);
-			log.info("Service:: EmployeeAttendance Attendance retreived: "+employeeTimerecords.toString());
+			log.debug("Service:: EmployeeAttendance Attendance retreived: "+employeeTimerecords.toString());
 		}else{
 			log.debug("getCalculateAttendanceEmployee ::: Employee is invalid"+empId);
 		}
@@ -104,14 +104,14 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         Boolean submitStatus = false;
         
         if(employeeDetails != null){
-        	log.info("Checking charge code");
+        	log.debug("Checking charge code");
         	chargeCodeList = getChargeCodeList(employeeTimerecords);
-        	log.info("chargeCodeList: "+chargeCodeList.length);
+        	log.debug("chargeCodeList: "+chargeCodeList.length);
         	log.debug("connecting to chargecodes");
         	/*ChargeCode ch = chargeCodeService.getChargeCodeDetails("AAAAA");
         	log.info("charge code: "+ch.toString());*/
         	chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
-        	log.info("Chargecode lis: "+chareCodeEntityList.toString());
+        	log.debug("Chargecode lis: "+chareCodeEntityList.toString());
         	EmployeeTimerecords empTimerecords;
         	//ChargeCode charc = chargeCodeService.getChargeCodeDetails("AAAAA");
         	//chareCodeEntityList.add(charc);
@@ -120,9 +120,9 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         		if(validateTR){
         			empTimerecords = constructEmployeeTimerecord(employeeTimerecords.getEmployeeId(), employeeTimerecords.getTimerecord());
         			EmployeeTimerecords employeeAttenanceSaved = timerecordsRepository.save(empTimerecords);
-        			log.info("Constructred timerecord: "+employeeTimerecords.toString());
-        			log.info("Request :: Timerecord: "+empTimerecords.toString());
-        			log.info("Saved timerecords: "+employeeAttenanceSaved);
+        			log.debug("Constructred timerecord: "+employeeTimerecords.toString());
+        			log.debug("Request :: Timerecord: "+empTimerecords.toString());
+        			log.debug("Saved timerecords: "+employeeAttenanceSaved);
         			if(employeeAttenanceSaved.toString().equals(empTimerecords.toString())){
         				submitStatus = true;
         			}else{

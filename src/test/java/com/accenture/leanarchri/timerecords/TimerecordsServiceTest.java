@@ -3,12 +3,15 @@ package com.accenture.leanarchri.timerecords;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -17,6 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.accenture.leanarchri.timerecords.client.EmployeeDetailsService;
 import com.accenture.leanarchri.timerecords.client.vo.EmployeeDetails;
 import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
+import com.accenture.leanarchri.timerecords.domain.Timerecord;
 import com.accenture.leanarchri.timerecords.repository.TimerecordsRepository;
 import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
 
@@ -26,10 +30,14 @@ import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
  *
  */
 
-
+//@RunWith(PowerMockRunner.class)
+//@PowerMockRunnerDelegate(SpringRunner.class) 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TimeRecordsApplication.class)
+//@PrepareForTest(TimeRecordsApplication.class) 
 public class TimerecordsServiceTest {
+	
+	private static final Logger log = LoggerFactory.getLogger(TimerecordsServiceTest.class);
 	
 	@Autowired
 	private TimeRecordsServiceImpl timerecordService;
@@ -38,6 +46,8 @@ public class TimerecordsServiceTest {
 	private EmployeeDetailsService employeeDetailsService;
 	@MockBean
 	private TimerecordsRepository timerecordsRepository;
+	
+	
 	
 	/*@MockBean
 	private AttendanceAggregator attendanceAggregator;
@@ -53,21 +63,34 @@ public class TimerecordsServiceTest {
 */
 	
 	@Test
-	public void getCalculateAttendanceEmployeeForNoAttendanceTest(){
+	public void TestTimerecordsForNullTimerecords(){
 		
-		//Collection<EmployeeTimerecords> employeeTimerecords = new ArrayList<>();
-		//employeeTimerecords.add(new EmployeeTimerecords(1, 1000, null));
 		List<EmployeeTimerecords> employeeTimerecords=Arrays.asList(new EmployeeTimerecords(1000, 1000, null));
+		//PowerMockito.mock(Correlation.class);
+		//given(Correlation.getId()).willReturn("correlationId-test");
 		EmployeeDetails employeeDetails = new EmployeeDetails("Amith", "Bhandari",55,"Bangalore", "amith@gmail.com", 1000);
-		given(this.employeeDetailsService.getEmployeeDetails("Ti8776652",1000)).willReturn(employeeDetails);
+		given(this.employeeDetailsService.getEmployeeDetails(null,1000)).willReturn(employeeDetails);
 		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeTimerecords);
 		Collection<EmployeeTimerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
-		//System.out.println("employeeId :  "+ result.);
 		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);
-		
-		
 	}
 	
+	@Test
+	public void TestTimerecordsForValidTimerecords(){
+		
+		Timerecord timerecords = new Timerecord("01-02-2017", 9, "AAAAA","Bangalore-6");
+		Collection<Timerecord> timerecordsList = new ArrayList<>();
+		timerecordsList.add(timerecords);
+		
+		List<EmployeeTimerecords> employeeTimerecords=Arrays.asList(new EmployeeTimerecords(1000, 1000, timerecordsList));
+		//PowerMockito.mock(Correlation.class);
+		//given(Correlation.getId()).willReturn("correlationId-test");
+		EmployeeDetails employeeDetails = new EmployeeDetails("Amith", "Bhandari",55,"Bangalore", "amith@gmail.com", 1000);
+		given(this.employeeDetailsService.getEmployeeDetails(null,1000)).willReturn(employeeDetails);
+		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeTimerecords);
+		Collection<EmployeeTimerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
+		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);
+	}
 	
 	/*@Test
 	public void getCalculateAttendanceEmployeeForSingleDayAttendanceTest(){

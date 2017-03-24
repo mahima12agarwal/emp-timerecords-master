@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiOperation;
  *
  */
 @RestController
-//@Api(tags = "Employee Timerecords API")
+@Api(tags = "Employee Timerecords API")
 public class TimeRecordsController {
 	
 
