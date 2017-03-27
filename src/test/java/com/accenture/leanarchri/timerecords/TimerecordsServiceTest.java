@@ -17,12 +17,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.accenture.leanarchri.timerecords.client.AssignmentsService;
+import com.accenture.leanarchri.timerecords.client.ChargeCodeService;
 import com.accenture.leanarchri.timerecords.client.EmployeeDetailsService;
 import com.accenture.leanarchri.timerecords.client.vo.EmployeeDetails;
 import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
 import com.accenture.leanarchri.timerecords.domain.Timerecord;
 import com.accenture.leanarchri.timerecords.repository.TimerecordsRepository;
 import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
+import com.accenture.leanarchri.timerecords.utility.RecordValidator;
 
 
 /**
@@ -41,6 +44,17 @@ public class TimerecordsServiceTest {
 	
 	@Autowired
 	private TimeRecordsServiceImpl timerecordService;
+	
+	@MockBean
+	private RecordValidator recordvalidator;
+	
+	@MockBean
+	ChargeCodeService chargecodeService;
+	
+	@MockBean
+	AssignmentsService assignmentService;
+	
+	
 	
 	@MockBean
 	private EmployeeDetailsService employeeDetailsService;

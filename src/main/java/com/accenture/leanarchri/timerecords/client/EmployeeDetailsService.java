@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.accenture.leanarchri.timerecords.client.vo.EmployeeDetails;
 
 @FeignClient(name = "empdetailsmaster")
-@SpringBootApplication
 public interface EmployeeDetailsService {
 	
 	@RequestMapping(value = "/employees/{empId}",method = RequestMethod.GET)

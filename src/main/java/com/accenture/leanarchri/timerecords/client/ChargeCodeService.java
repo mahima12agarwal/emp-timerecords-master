@@ -13,7 +13,6 @@ import com.accenture.leanarchri.timerecords.client.vo.ChargeCode;
 
 
 @FeignClient(name = "chargecodes")
-@SpringBootApplication
 public interface ChargeCodeService {
 	
 	/*@RequestMapping(value = "/chargecodes/{wbs}",  method = RequestMethod.GET)

@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Service;
 
 import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
 import com.accenture.leanarchri.timerecords.domain.Timerecord;
@@ -24,7 +25,6 @@ import com.accenture.leanarchri.timerecords.domain.Timerecord;
  * @author j.venugopalan
  *
  */
-@SpringBootApplication
 public class RecordValidator {
 	
 	public static final Logger log = LoggerFactory.getLogger(RecordValidator.class);
