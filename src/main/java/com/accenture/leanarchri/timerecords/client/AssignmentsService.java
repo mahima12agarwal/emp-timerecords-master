@@ -11,7 +11,6 @@ import com.accenture.leanarchri.timerecords.client.vo.EmployeeAssignments;
 
 
 @FeignClient(name = "assignments")
-@SpringBootApplication
 public interface AssignmentsService {
 	
 	@RequestMapping(value = "/employees/assignments/{empId}", method=RequestMethod.GET)
