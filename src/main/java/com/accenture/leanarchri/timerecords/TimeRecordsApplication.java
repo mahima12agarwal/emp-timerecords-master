@@ -20,7 +20,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import com.accenture.leanarchri.utils.CorrelationHeaderFilter;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -35,8 +34,6 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Component
-@Service
 @EnableAutoConfiguration
 @EnableCircuitBreaker
 @EnableDiscoveryClient

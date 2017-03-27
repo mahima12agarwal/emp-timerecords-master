@@ -23,7 +23,7 @@ import feign.RequestTemplate;
  *
  */
 @Configuration
-@EnableCouchbaseRepositories
+@EnableCouchbaseRepositories(basePackages = {"com.accenture.leanarchri.timerecords" })
 public class Config extends AbstractCouchbaseConfiguration {
 	
 	@Value("${couchbaseDB.url}")

@@ -33,7 +33,7 @@ import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
 //@RunWith(PowerMockRunner.class)
 //@PowerMockRunnerDelegate(SpringRunner.class) 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = TimeRecordsApplication.class)
+@SpringBootTest(classes = TimeRecordsServiceImpl.class)
 //@PrepareForTest(TimeRecordsApplication.class) 
 public class TimerecordsServiceTest {
 	
