@@ -1,4 +1,4 @@
-package com.accenture.lari.timerecords.client.vo;
+package com.accenture.lari.timerecords.integration.services.vo;
 
 
 import org.springframework.data.couchbase.core.mapping.Document;

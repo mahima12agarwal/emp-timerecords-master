@@ -1,4 +1,4 @@
-package com.accenture.lari.timerecords.client;
+package com.accenture.lari.timerecords.integration.services;
 
 import java.util.Collection;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.accenture.lari.timerecords.client.vo.ChargeCode;
+import com.accenture.lari.timerecords.integration.services.vo.ChargeCode;
 
 
 @FeignClient(name = "chargecodes")

@@ -17,12 +17,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.accenture.lari.timerecords.client.AssignmentsService;
-import com.accenture.lari.timerecords.client.ChargeCodeService;
-import com.accenture.lari.timerecords.client.EmployeeDetailsService;
-import com.accenture.lari.timerecords.client.vo.EmployeeDetails;
 import com.accenture.lari.timerecords.domain.TimerecordLineItem;
 import com.accenture.lari.timerecords.domain.Timerecords;
+import com.accenture.lari.timerecords.integration.services.AssignmentsService;
+import com.accenture.lari.timerecords.integration.services.ChargeCodeService;
+import com.accenture.lari.timerecords.integration.services.EmployeeDetailsService;
+import com.accenture.lari.timerecords.integration.services.vo.EmployeeDetails;
 import com.accenture.lari.timerecords.repository.TimerecordsRepository;
 import com.accenture.lari.timerecords.service.impl.TimeRecordsServiceImpl;
 import com.accenture.lari.timerecords.utility.RecordValidator;

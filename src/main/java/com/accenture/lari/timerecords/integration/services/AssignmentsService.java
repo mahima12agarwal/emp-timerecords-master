@@ -1,4 +1,4 @@
-package com.accenture.lari.timerecords.client;
+package com.accenture.lari.timerecords.integration.services;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.feign.FeignClient;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.accenture.lari.timerecords.client.vo.EmployeeAssignments;
+import com.accenture.lari.timerecords.integration.services.vo.EmployeeAssignments;
 
 
 
