@@ -17,15 +17,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.accenture.leanarchri.timerecords.client.AssignmentsService;
-import com.accenture.leanarchri.timerecords.client.ChargeCodeService;
-import com.accenture.leanarchri.timerecords.client.EmployeeDetailsService;
-import com.accenture.leanarchri.timerecords.client.vo.EmployeeDetails;
-import com.accenture.leanarchri.timerecords.domain.EmployeeTimerecords;
-import com.accenture.leanarchri.timerecords.domain.Timerecord;
-import com.accenture.leanarchri.timerecords.repository.TimerecordsRepository;
-import com.accenture.leanarchri.timerecords.service.impl.TimeRecordsServiceImpl;
-import com.accenture.leanarchri.timerecords.utility.RecordValidator;
+import com.accenture.lari.timerecords.client.AssignmentsService;
+import com.accenture.lari.timerecords.client.ChargeCodeService;
+import com.accenture.lari.timerecords.client.EmployeeDetailsService;
+import com.accenture.lari.timerecords.client.vo.EmployeeDetails;
+import com.accenture.lari.timerecords.domain.TimerecordLineItem;
+import com.accenture.lari.timerecords.domain.Timerecords;
+import com.accenture.lari.timerecords.repository.TimerecordsRepository;
+import com.accenture.lari.timerecords.service.impl.TimeRecordsServiceImpl;
+import com.accenture.lari.timerecords.utility.RecordValidator;
 
 
 /**
@@ -54,56 +54,40 @@ public class TimerecordsServiceTest {
 	@MockBean
 	AssignmentsService assignmentService;
 	
-	
-	
 	@MockBean
 	private EmployeeDetailsService employeeDetailsService;
+	
 	@MockBean
 	private TimerecordsRepository timerecordsRepository;
-	
-	
-	
-	/*@MockBean
-	private AttendanceAggregator attendanceAggregator;
-	
-	@MockBean
-	private RestClient restClient;*/
-	
-	/*@MockBean
-	private RestTemplate restTemplate;*/
-	
-/*	@MockBean
-	private EmployeeRepository employeeRepository;
-*/
 	
 	@Test
 	public void TestTimerecordsForNullTimerecords(){
 		
-		List<EmployeeTimerecords> employeeTimerecords=Arrays.asList(new EmployeeTimerecords(1000, 1000, null));
+		List<Timerecords> employeeTimerecords=Arrays.asList(new Timerecords(1000, 1000, null));
 		//PowerMockito.mock(Correlation.class);
 		//given(Correlation.getId()).willReturn("correlationId-test");
 		EmployeeDetails employeeDetails = new EmployeeDetails("Amith", "Bhandari",55,"Bangalore", "amith@gmail.com", 1000);
 		given(this.employeeDetailsService.getEmployeeDetails(null,1000)).willReturn(employeeDetails);
 		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeTimerecords);
-		Collection<EmployeeTimerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
-		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);
+		Collection<Timerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
+		assertThat(((List<Timerecords>)result).get(0).employeeId).isEqualTo(1000);
 	}
 	
 	@Test
 	public void TestTimerecordsForValidTimerecords(){
 		
-		Timerecord timerecords = new Timerecord("01-02-2017", 9, "AAAAA","Bangalore-6");
-		Collection<Timerecord> timerecordsList = new ArrayList<>();
+		TimerecordLineItem timerecords = new TimerecordLineItem("01-02-2017", 9, "AAAAA","Bangalore-6");
+		Collection<TimerecordLineItem> timerecordsList = new ArrayList<>();
 		timerecordsList.add(timerecords);
 		
-		List<EmployeeTimerecords> employeeTimerecords=Arrays.asList(new EmployeeTimerecords(1000, 1000, timerecordsList));
+		List<Timerecords> employeeTimerecords=Arrays.asList(new Timerecords(1000, 1000, timerecordsList));
 		//PowerMockito.mock(Correlation.class);
 		//given(Correlation.getId()).willReturn("correlationId-test");
 		EmployeeDetails employeeDetails = new EmployeeDetails("Amith", "Bhandari",55,"Bangalore", "amith@gmail.com", 1000);
 		given(this.employeeDetailsService.getEmployeeDetails(null,1000)).willReturn(employeeDetails);
 		given(this.timerecordsRepository.findByEmployeeId(1000)).willReturn(employeeTimerecords);
-		Collection<EmployeeTimerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
-		assertThat(((List<EmployeeTimerecords>)result).get(0).employeeId).isEqualTo(1000);
+		Collection<Timerecords> result= timerecordService.getCalculateAttendanceEmployee(1000);
+		assertThat(((List<Timerecords>)result).get(0).employeeId).isEqualTo(1000);
 	}
 	
 	/*@Test
