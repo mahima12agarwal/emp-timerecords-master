@@ -94,22 +94,26 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	
 	@HystrixCommand(fallbackMethod="handleTimerecordSubmitFailure")
 	public Boolean submitEmployeeTimerecords(Timerecords employeeTimerecords){
-		log.info("submitEmployeeTimerecords ::: STARt");
+		log.info("submitEmployeeTimerecords ::: START");
 		String correlationId = Correlation.getId();
-		Collection<ChargeCode> chareCodeEntityList;
+		Collection<ChargeCode> chareCodeEntityList = null;
 		String[] chargeCodeList;
 		Boolean validateTR = false;
 		
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, employeeTimerecords.getEmployeeId());
         log.debug("Employee Details :"+employeeDetails.toString());
         Boolean submitStatus = false;
-        
         if(employeeDetails != null){
         	log.debug("Checking charge code");
         	chargeCodeList = getChargeCodeList(employeeTimerecords);
-        	chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
-        	log.debug("Chargecode lis: "+chareCodeEntityList.toString());
-        	Timerecords empTimerecords;
+        	try {
+        		chareCodeEntityList = chargeCodeService.getChargeCodes(correlationId, chargeCodeList);
+                log.debug("Chargecode list: "+chareCodeEntityList.toString());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+        	
+		    Timerecords empTimerecords;
         	if(chareCodeEntityList != null){
         		validateTR = recordValidator.validateTimeRecords(employeeTimerecords);
         		if(validateTR){
@@ -130,6 +134,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
         }else{
         	log.info("Employee is not valid.");
         }
+        log.info("submitEmployeeTimerecords ::: END");
 		return submitStatus;
 	}
 	

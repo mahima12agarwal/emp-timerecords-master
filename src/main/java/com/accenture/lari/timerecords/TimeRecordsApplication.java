@@ -20,7 +20,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.stereotype.Component;
 
-import com.accenture.lari.utils.CorrelationHeaderFilter;
+import com.accenture.lari.utils.GatewayHeaderFilter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -58,7 +58,7 @@ public class TimeRecordsApplication {
 	@Bean
 	public FilterRegistrationBean correlationHeaderFilter() {
 		FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
-		filterRegBean.setFilter(new CorrelationHeaderFilter());
+		filterRegBean.setFilter(new GatewayHeaderFilter());
 		filterRegBean.setUrlPatterns(Arrays.asList("/*"));
 
 		return filterRegBean;
