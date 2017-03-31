@@ -44,8 +44,7 @@ public class Config extends AbstractCouchbaseConfiguration {
     protected String getBucketPassword() {
         return "ACC@123*";
     }
-    
-   //TODO- extract to filter
+  
     @Bean    
     public RequestInterceptor requestTokenBearerInterceptor() {
 

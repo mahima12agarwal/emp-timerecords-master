@@ -16,11 +16,11 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
 /**
- * CorrelationHeaderFilter
+ * GatewayHeaderFilter
  */
-public class CorrelationHeaderFilter implements Filter {
+public class GatewayHeaderFilter implements Filter {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CorrelationHeaderFilter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GatewayHeaderFilter.class);
 
 
     public void init(FilterConfig filterConfig) throws ServletException {
