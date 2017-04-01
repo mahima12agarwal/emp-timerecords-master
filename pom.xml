@@ -233,7 +233,7 @@
        		 <version>2.18</version>
           <configuration>
           <excludes>
-            <excluded>TimeRecordsConsumerPactTest.class</excluded>
+            <excluded>**/TimeRecordsConsumerPactTest.class</excluded>
           </excludes>
           </configuration>
         </plugin>
