@@ -44,7 +44,7 @@ public class TimeRecordsController {
 	@RequestMapping(value = "/timerecords/{empId}", method=RequestMethod.GET)
     //@ApiOperation(value = "GetEmployeeTimerecords", nickname = "GetEmployeeTimerecords") 
 	public Collection<Timerecords> getEmployeeAttendance(@PathVariable("empId") Integer id){
-		log.debug("AttendanceController ::: getEmployeeAttendance ::: START");
+		log.debug("AttendanceController ::: getEmployeeAttendance ::: START: Refactored version");
 		Collection<Timerecords> employeeAttendance;
 			employeeAttendance = timeRecordsService.getCalculateAttendanceEmployee(id);
 			log.debug("day attendance: "+employeeAttendance.toString());
@@ -58,11 +58,11 @@ public class TimeRecordsController {
 	@RequestMapping(value = "/timerecords", method = RequestMethod.GET)
 	//@ApiOperation(value = "GetAllEmployeeTimerecords", nickname = "GetAllEmployeeTimerecords") 
 	public Collection<Timerecords> getEmployeeAttendance(){
-		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: START");
+		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: START : Refactored version");
 		Collection<Timerecords> employeeAttendance = new ArrayList<Timerecords>();
 		employeeAttendance = timeRecordsService.getCalculateAttendanceEmployees();
 		log.debug("Employee Attendance: "+employeeAttendance.toString());
-		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: END");
+		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: END : Refactored version");
 		return	employeeAttendance;
 	}
 	
