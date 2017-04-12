@@ -74,7 +74,7 @@
 <!--         <appender-ref ref="jsonAppender"/> -->
 
 <!--     </logger> -->
-    <root level="debug">
+    <root level="info">
          <appender-ref ref="FILE"/>
          <appender-ref ref="STASH"/>
          <appender-ref ref="consoleAppender"/>

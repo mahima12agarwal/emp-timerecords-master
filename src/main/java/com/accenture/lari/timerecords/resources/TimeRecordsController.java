@@ -44,11 +44,11 @@ public class TimeRecordsController {
 	@RequestMapping(value = "/timerecords/{empId}", method=RequestMethod.GET)
     //@ApiOperation(value = "GetEmployeeTimerecords", nickname = "GetEmployeeTimerecords") 
 	public Collection<Timerecords> getEmployeeAttendance(@PathVariable("empId") Integer id){
-		log.debug("AttendanceController ::: getEmployeeAttendance ::: START: Refactored version");
+		log.info("AttendanceController ::: getEmployeeAttendance ::: START");
 		Collection<Timerecords> employeeAttendance;
 			employeeAttendance = timeRecordsService.getCalculateAttendanceEmployee(id);
 			log.debug("day attendance: "+employeeAttendance.toString());
-		log.debug("AttendanceController ::: getEmployeeAttendance ::: END");
+		log.info("AttendanceController ::: getEmployeeAttendance ::: END");
 		return employeeAttendance;
 	}
 	/**
@@ -58,19 +58,21 @@ public class TimeRecordsController {
 	@RequestMapping(value = "/timerecords", method = RequestMethod.GET)
 	//@ApiOperation(value = "GetAllEmployeeTimerecords", nickname = "GetAllEmployeeTimerecords") 
 	public Collection<Timerecords> getEmployeeAttendance(){
-		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: START : Refactored version");
+		log.info("AttendanceController ::: getEmployeeAttendance::: All employees ::: START");
 		Collection<Timerecords> employeeAttendance = new ArrayList<Timerecords>();
 		employeeAttendance = timeRecordsService.getCalculateAttendanceEmployees();
 		log.debug("Employee Attendance: "+employeeAttendance.toString());
-		log.debug("AttendanceController ::: getEmployeeAttendance::: All employees ::: END : Refactored version");
+		log.info("AttendanceController ::: getEmployeeAttendance::: All employees ::: END");
 		return	employeeAttendance;
 	}
 	
 	@RequestMapping(value = "/timerecords", method=RequestMethod.POST)
 	//@ApiOperation(value = "SubmitEmployeeTimerecords", nickname = "SubmitEmployeeTimerecords")
 	public Boolean submitEmployeeAttanceService(@RequestBody Timerecords employeeTimerecords){
+		log.info("submitEmployeeAttanceService ::: POST :: START");
 		log.debug("submitEmployeeAttanceService ::: POST: Request: "+employeeTimerecords.toString());
 		Boolean submitStatus = timeRecordsService.submitEmployeeTimerecords(employeeTimerecords);
+		log.info("submitEmployeeAttanceService ::: POST :: END");
 		return submitStatus;
 	}
 	

@@ -54,7 +54,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 	public Collection<Timerecords> getCalculateAttendanceEmployee(Integer empId){
 		Collection<Timerecords> employeeTimerecords = new ArrayList<>();
 		String correlationId = Correlation.getId();
-		log.debug("getCalculateAttendanceEmployee::: empId: "+empId);
+		log.info("getCalculateAttendanceEmployee::: START");
 		EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(correlationId, empId);
         log.debug("Employee Details got from mock obj :"+employeeDetails.toString());
 		if(employeeDetails != null){
@@ -62,8 +62,9 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 			 employeeTimerecords = timerecordsRepository.findByEmployeeId(empId);
 			log.debug("Service:: EmployeeAttendance Attendance retreived: "+employeeTimerecords.toString());
 		}else{
-			log.debug("getCalculateAttendanceEmployee ::: Employee is invalid"+empId);
+			log.info("getCalculateAttendanceEmployee ::: Employee is invalid"+empId);
 		}
+		log.info("getCalculateAttendanceEmployee ::: END");
 		return  employeeTimerecords;
 	}
 	
@@ -83,7 +84,7 @@ public class TimeRecordsServiceImpl implements TimeRecordsService {
 		Collection<Timerecords>  employeesTimerecords = new ArrayList<>();
 		employeesTimerecords = (Collection<Timerecords>) timerecordsRepository.findAll();
 		log.debug("received from bd: "+employeesTimerecords.toString());
-		log.debug("Attendance Calculator::: getCalculateAttendanceEmployees::: End");
+		log.info("Attendance Calculator::: getCalculateAttendanceEmployees::: End");
 		return  employeesTimerecords;
 	}
 
