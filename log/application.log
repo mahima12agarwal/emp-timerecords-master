@@ -635,3 +635,723 @@ Using default security password: 46854ea4-7d56-4bfa-8c04-da7e8d6cc5a2
 13:28:45.444 [http-nio-8095-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] CorrelationId  - Initializing Spring FrameworkServlet 'dispatcherServlet'
 13:28:45.445 [http-nio-8095-exec-1] INFO  o.s.web.servlet.DispatcherServlet CorrelationId  - FrameworkServlet 'dispatcherServlet': initialization started
 13:28:45.576 [http-nio-8095-exec-1] INFO  o.s.web.servlet.DispatcherServlet CorrelationId  - FrameworkServlet 'dispatcherServlet': initialization completed in 131 ms
+13:32:39.192 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver CorrelationId  - Resolving eureka endpoints via configuration
+13:37:39.216 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver CorrelationId  - Resolving eureka endpoints via configuration
+13:39:19.171 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c130548: startup date [Thu Apr 13 13:27:14 IST 2017]; root of context hierarchy
+13:39:19.173 [Thread-12] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b068d24: startup date [Thu Apr 13 13:27:15 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4c130548
+13:39:19.175 [Thread-12] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+13:39:19.176 [Thread-12] WARN  c.netflix.discovery.DiscoveryClient CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1492070959176, current=DOWN, previous=UP]
+13:39:19.176 [Thread-12] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Shutting down DiscoveryClient ...
+13:39:19.177 [Thread-12] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Unregistering ...
+13:39:19.775 [Thread-12] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - deregister  status: 200
+13:39:19.779 [Thread-12] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Completed shut down of DiscoveryClient
+13:39:19.848 [Thread-12] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 2147483647
+13:39:19.851 [Thread-12] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 0
+13:39:19.856 [Thread-12] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:39:19.857 [Thread-12] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:39:19.859 [Thread-12] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:39:19.859 [Thread-12] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:39:19.874 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7110db84: startup date [Thu Apr 13 13:27:30 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b068d24
+13:39:19.882 [Thread-12] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:19.884 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5e99059a: startup date [Thu Apr 13 13:27:30 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b068d24
+13:39:19.885 [Thread-12] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:19.918 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@155055ed: startup date [Thu Apr 13 13:27:29 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b068d24
+13:39:19.919 [Thread-12] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:19.955 [Thread-12] INFO  c.c.c.c.config.ConfigurationProvider CorrelationId  - Closed bucket attendance
+13:39:20.020 [cb-io-1-3] INFO  com.couchbase.client.core.node.Node CorrelationId  - Disconnected from Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:21.280 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1343273b: startup date [Thu Apr 13 13:39:21 IST 2017]; root of context hierarchy
+13:39:21.438 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:21.440 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:22.754 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication CorrelationId  - No active profile set, falling back to default profiles: default
+13:39:22.763 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d: startup date [Thu Apr 13 13:39:22 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1343273b
+13:39:25.418 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'hystrixFeature' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixWebConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration$HystrixWebConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration.class]]
+13:39:25.524 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+13:39:25.697 [restartedMain] WARN  o.s.c.a.ConfigurationClassPostProcessor CorrelationId  - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+13:39:25.726 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope CorrelationId  - BeanFactory id=00e89c24-9c47-3cc4-a4ee-a9ace6a18761
+13:39:25.766 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:25.778 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$416ad226] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:25.781 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping CorrelationId  - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+13:39:25.819 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:26.980 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer CorrelationId  - Tomcat initialized with port(s): 8095 (http)
+13:39:26.981 [restartedMain] INFO  o.a.catalina.core.StandardService CorrelationId  - Starting service Tomcat
+13:39:26.982 [restartedMain] INFO  o.a.catalina.core.StandardEngine CorrelationId  - Starting Servlet Engine: Apache Tomcat/8.5.6
+13:39:27.010 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] CorrelationId  - Initializing Spring embedded WebApplicationContext
+13:39:27.012 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader CorrelationId  - Root WebApplicationContext: initialization completed in 4249 ms
+13:39:27.513 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'metricsFilter' to: [/*]
+13:39:27.514 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'characterEncodingFilter' to: [/*]
+13:39:27.514 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13:39:27.514 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13:39:27.515 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'requestContextFilter' to: [/*]
+13:39:27.515 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean CorrelationId  - Mapping filter: 'springSecurityFilterChain' to: [/*]
+13:39:27.516 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+13:39:27.516 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'gatewayHeaderFilter' to urls: [/*]
+13:39:27.516 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'applicationContextIdFilter' to: [/*]
+13:39:27.516 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean CorrelationId  - Mapping servlet: 'dispatcherServlet' to [/]
+13:39:27.517 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean CorrelationId  - Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+13:39:27.796 [restartedMain] WARN  c.c.client.core.env.CoreEnvironment CorrelationId  - More than 1 Couchbase Environments found (2), this can have severe impact on performance and stability. Reuse environments!
+13:39:27.873 [restartedMain] INFO  c.c.client.core.CouchbaseCore CorrelationId  - CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, searchServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.2.8 (git: 2.2.8, core: 1.2.9), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS, powers of 2; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, tcpNodelayEnabled=true, mutationTokensEnabled=false, socketConnectTimeout=1000, dcpConnectionBufferSize=20971520, dcpConnectionBufferAckThreshold=0.2, dcpConnectionName=dcp/core-io, callbacksOnIoPool=false, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=5000, disconnectTimeout=25000, dnsSrvEnabled=false}
+13:39:28.425 [cb-io-5-1] INFO  com.couchbase.client.core.node.Node CorrelationId  - Connected to Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:28.851 [cb-io-5-1] INFO  com.couchbase.client.core.node.Node CorrelationId  - Disconnected from Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:30.418 [cb-io-5-2] INFO  com.couchbase.client.core.node.Node CorrelationId  - Connected to Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:31.794 [cb-computations-8] INFO  c.c.c.c.config.ConfigurationProvider CorrelationId  - Opened bucket attendance
+13:39:32.114 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a63d0f9: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:32.127 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:32.800 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@69b6278f: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:32.813 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:32.830 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@478ec3f2: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:32.842 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:33.361 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance()
+13:39:33.361 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords/{empId}],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance(java.lang.Integer)
+13:39:33.362 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords],methods=[POST]}" onto public java.lang.Boolean com.accenture.lari.timerecords.resources.TimeRecordsController.submitEmployeeAttanceService(com.accenture.lari.timerecords.domain.Timerecords)
+13:39:33.363 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+13:39:33.365 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+13:39:33.366 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+13:39:33.366 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+13:39:33.369 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13:39:33.370 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13:39:34.268 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+13:39:34.282 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.284 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.285 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.286 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+13:39:34.287 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+13:39:34.287 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.288 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.289 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.290 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+13:39:34.291 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+13:39:34.292 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+13:39:34.292 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:34.293 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:34.294 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.295 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.296 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+13:39:34.297 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.298 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.298 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+13:39:34.299 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:34.300 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+13:39:34.300 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:34.675 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter CorrelationId  - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d: startup date [Thu Apr 13 13:39:22 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1343273b
+13:39:34.740 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:34.740 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:34.773 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:34.921 [restartedMain] INFO  o.s.b.a.s.AuthenticationManagerConfiguration CorrelationId  - 
+
+Using default security password: 7a805e66-9758-41be-9ac3-b8588b925e5f
+
+13:39:34.959 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+13:39:35.021 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d373154, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e460d2e, org.springframework.security.web.header.HeaderWriterFilter@3a95832e, org.springframework.security.web.authentication.logout.LogoutFilter@4a4acb5b, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1a3f4bd9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c5ef7bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f0013f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ee3b605, org.springframework.security.web.session.SessionManagementFilter@51e70733, org.springframework.security.web.access.ExceptionTranslationFilter@685d7dcb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d9c0e50]
+13:39:35.035 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6232d906, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@586e53d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@6599fb17, org.springframework.security.web.header.HeaderWriterFilter@11244e46, org.springframework.security.web.authentication.logout.LogoutFilter@38d80ee2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2dd05a1f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fb91e03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cdc39cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25246504, org.springframework.security.web.session.SessionManagementFilter@48c796fb, org.springframework.security.web.access.ExceptionTranslationFilter@11a17374, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3574e97a]
+13:39:35.039 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48acf98d, org.springframework.security.web.context.SecurityContextPersistenceFilter@21df05d2, org.springframework.security.web.header.HeaderWriterFilter@318f6c7e, org.springframework.security.web.authentication.logout.LogoutFilter@3bb93400, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62114730, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d7478e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27d215aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77cad6c9, org.springframework.security.web.session.SessionManagementFilter@22e7d212, org.springframework.security.web.access.ExceptionTranslationFilter@50d38681, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18f4320]
+13:39:35.467 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer CorrelationId  - LiveReload server is running on port 35729
+13:39:35.509 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource CorrelationId  - No URLs will be polled as dynamic configuration sources.
+13:39:35.510 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource CorrelationId  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+13:39:35.597 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Registering beans for JMX exposure on startup
+13:39:35.602 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'refreshScope' has been autodetected for JMX exposure
+13:39:35.603 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'environmentManager' has been autodetected for JMX exposure
+13:39:35.605 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+13:39:35.606 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+13:39:35.607 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+13:39:35.609 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+13:39:35.616 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+13:39:35.626 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+13:39:35.636 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=13fad18d,type=ConfigurationPropertiesRebinder]
+13:39:35.639 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+13:39:35.640 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Registering beans for JMX exposure on startup
+13:39:35.909 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Starting beans in phase 0
+13:39:35.912 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory CorrelationId  - Setting initial instance status as: STARTING
+13:39:35.935 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using JSON encoding codec LegacyJacksonJson
+13:39:35.936 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using JSON decoding codec LegacyJacksonJson
+13:39:35.936 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using XML encoding codec XStreamXml
+13:39:35.936 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using XML decoding codec XStreamXml
+13:39:36.027 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver CorrelationId  - Resolving eureka endpoints via configuration
+13:39:36.031 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Disable delta property : false
+13:39:36.031 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Single vip registry refresh property : null
+13:39:36.031 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Force full registry fetch : false
+13:39:36.031 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Application is null : false
+13:39:36.032 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Registered Applications size is zero : true
+13:39:36.032 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Application version is -1: true
+13:39:36.032 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Getting all instance registry info from the eureka server
+13:39:36.568 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - The response status is 200
+13:39:36.570 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Starting heartbeat executor: renew interval is: 30
+13:39:36.571 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator CorrelationId  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+13:39:36.572 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Discovery Client initialized at timestamp 1492070976572 with initial instances count: 6
+13:39:36.625 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Registering application timerecords with eureka with status UP
+13:39:36.626 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1492070976626, current=UP, previous=STARTING]
+13:39:36.627 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095: registering service...
+13:39:36.632 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+13:39:36.636 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+13:39:36.639 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+13:39:36.641 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+13:39:36.645 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+13:39:36.649 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+13:39:36.652 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+13:39:36.655 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+13:39:36.658 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+13:39:36.661 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+13:39:36.665 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+13:39:36.691 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+13:39:36.693 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Starting beans in phase 2147483647
+13:39:36.694 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper CorrelationId  - Context refreshed
+13:39:36.696 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper CorrelationId  - Found 1 custom documentation plugin(s)
+13:39:36.702 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner CorrelationId  - Scanning for api listing references
+13:39:36.731 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator CorrelationId  - Generating unique operation named: getEmployeeAttendanceUsingGET_1
+13:39:36.746 [restartedMain] INFO  o.s.c.n.h.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration CorrelationId  - Starting poller
+13:39:36.759 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol CorrelationId  - Initializing ProtocolHandler ["http-nio-8095"]
+13:39:36.760 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol CorrelationId  - Starting ProtocolHandler [http-nio-8095]
+13:39:36.766 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool CorrelationId  - Using a shared selector for servlet write/read
+13:39:36.778 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer CorrelationId  - Tomcat started on port(s): 8095 (http)
+13:39:36.779 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Updating port to 8095
+13:39:36.784 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication CorrelationId  - Started TimeRecordsApplication in 16.184 seconds (JVM running for 746.906)
+13:39:36.965 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - registration status: 204
+13:39:46.198 [Thread-16] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1343273b: startup date [Thu Apr 13 13:39:21 IST 2017]; root of context hierarchy
+13:39:46.200 [Thread-16] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d: startup date [Thu Apr 13 13:39:22 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1343273b
+13:39:46.201 [Thread-16] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+13:39:46.201 [Thread-16] WARN  c.netflix.discovery.DiscoveryClient CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1492070986201, current=DOWN, previous=UP]
+13:39:46.202 [Thread-16] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Shutting down DiscoveryClient ...
+13:39:46.202 [Thread-16] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Unregistering ...
+13:39:46.481 [Thread-16] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - deregister  status: 200
+13:39:46.486 [Thread-16] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Completed shut down of DiscoveryClient
+13:39:46.490 [Thread-16] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 2147483647
+13:39:46.491 [Thread-16] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 0
+13:39:46.493 [Thread-16] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:39:46.494 [Thread-16] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:39:46.495 [Thread-16] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:39:46.496 [Thread-16] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:39:46.511 [Thread-16] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@69b6278f: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:46.519 [Thread-16] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:46.521 [Thread-16] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@478ec3f2: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:46.522 [Thread-16] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:46.524 [Thread-16] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a63d0f9: startup date [Thu Apr 13 13:39:32 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13fad18d
+13:39:46.525 [Thread-16] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:39:46.534 [Thread-16] INFO  c.c.c.c.config.ConfigurationProvider CorrelationId  - Closed bucket attendance
+13:39:46.537 [cb-io-5-3] INFO  com.couchbase.client.core.node.Node CorrelationId  - Disconnected from Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:47.660 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@761da1ec: startup date [Thu Apr 13 13:39:47 IST 2017]; root of context hierarchy
+13:39:47.688 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:47.691 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:48.169 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication CorrelationId  - No active profile set, falling back to default profiles: default
+13:39:48.173 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f: startup date [Thu Apr 13 13:39:48 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@761da1ec
+13:39:50.137 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'hystrixFeature' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixWebConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration$HystrixWebConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration.class]]
+13:39:50.198 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+13:39:50.311 [restartedMain] WARN  o.s.c.a.ConfigurationClassPostProcessor CorrelationId  - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+13:39:50.336 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope CorrelationId  - BeanFactory id=00e89c24-9c47-3cc4-a4ee-a9ace6a18761
+13:39:50.363 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:50.371 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$416ad226] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:50.373 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping CorrelationId  - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+13:39:50.391 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:39:51.250 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer CorrelationId  - Tomcat initialized with port(s): 8095 (http)
+13:39:51.251 [restartedMain] INFO  o.a.catalina.core.StandardService CorrelationId  - Starting service Tomcat
+13:39:51.252 [restartedMain] INFO  o.a.catalina.core.StandardEngine CorrelationId  - Starting Servlet Engine: Apache Tomcat/8.5.6
+13:39:51.285 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] CorrelationId  - Initializing Spring embedded WebApplicationContext
+13:39:51.286 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader CorrelationId  - Root WebApplicationContext: initialization completed in 3113 ms
+13:39:51.615 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'metricsFilter' to: [/*]
+13:39:51.616 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'characterEncodingFilter' to: [/*]
+13:39:51.616 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13:39:51.616 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13:39:51.617 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'requestContextFilter' to: [/*]
+13:39:51.617 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean CorrelationId  - Mapping filter: 'springSecurityFilterChain' to: [/*]
+13:39:51.618 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+13:39:51.618 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'gatewayHeaderFilter' to urls: [/*]
+13:39:51.618 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean CorrelationId  - Mapping filter: 'applicationContextIdFilter' to: [/*]
+13:39:51.619 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean CorrelationId  - Mapping servlet: 'dispatcherServlet' to [/]
+13:39:51.619 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean CorrelationId  - Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+13:39:51.671 [restartedMain] WARN  c.c.client.core.env.CoreEnvironment CorrelationId  - More than 1 Couchbase Environments found (3), this can have severe impact on performance and stability. Reuse environments!
+13:39:51.702 [restartedMain] INFO  c.c.client.core.CouchbaseCore CorrelationId  - CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, searchServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.2.8 (git: 2.2.8, core: 1.2.9), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS, powers of 2; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, tcpNodelayEnabled=true, mutationTokensEnabled=false, socketConnectTimeout=1000, dcpConnectionBufferSize=20971520, dcpConnectionBufferAckThreshold=0.2, dcpConnectionName=dcp/core-io, callbacksOnIoPool=false, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=5000, disconnectTimeout=25000, dnsSrvEnabled=false}
+13:39:51.961 [cb-io-7-1] INFO  com.couchbase.client.core.node.Node CorrelationId  - Connected to Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:52.237 [cb-io-7-1] INFO  com.couchbase.client.core.node.Node CorrelationId  - Disconnected from Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:53.537 [cb-io-7-2] INFO  com.couchbase.client.core.node.Node CorrelationId  - Connected to Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:39:53.801 [cb-computations-12] INFO  c.c.c.c.config.ConfigurationProvider CorrelationId  - Opened bucket attendance
+13:39:54.016 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1ab7930a: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:39:54.025 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:54.429 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2598739a: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:39:54.437 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:54.450 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@280559f4: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:39:54.459 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:39:54.738 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance()
+13:39:54.739 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords/{empId}],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance(java.lang.Integer)
+13:39:54.739 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/timerecords],methods=[POST]}" onto public java.lang.Boolean com.accenture.lari.timerecords.resources.TimeRecordsController.submitEmployeeAttanceService(com.accenture.lari.timerecords.domain.Timerecords)
+13:39:54.740 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+13:39:54.741 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+13:39:54.742 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+13:39:54.742 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+13:39:54.744 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13:39:54.744 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping CorrelationId  - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13:39:55.506 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+13:39:55.507 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+13:39:55.507 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.508 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+13:39:55.508 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:55.509 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.510 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+13:39:55.510 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.510 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+13:39:55.511 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+13:39:55.511 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.512 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.512 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+13:39:55.513 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.514 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.514 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.515 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+13:39:55.516 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+13:39:55.516 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.516 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:55.517 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+13:39:55.517 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.518 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping CorrelationId  - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+13:39:55.866 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter CorrelationId  - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f: startup date [Thu Apr 13 13:39:48 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@761da1ec
+13:39:55.924 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:55.925 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:55.956 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping CorrelationId  - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:39:56.118 [restartedMain] INFO  o.s.b.a.s.AuthenticationManagerConfiguration CorrelationId  - 
+
+Using default security password: 43f21d75-eaad-47af-872b-6efc96179249
+
+13:39:56.206 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+13:39:56.253 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b4c5d96, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b8b049, org.springframework.security.web.header.HeaderWriterFilter@acc75a3, org.springframework.security.web.authentication.logout.LogoutFilter@1bdd1b1, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@57f35dd3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58714b40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c142800, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485e055b, org.springframework.security.web.session.SessionManagementFilter@212073f6, org.springframework.security.web.access.ExceptionTranslationFilter@95df569, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29444a70]
+13:39:56.263 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@36ccef98, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca94bfb, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ff49167, org.springframework.security.web.header.HeaderWriterFilter@74103110, org.springframework.security.web.authentication.logout.LogoutFilter@4981ed1a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@dc0d672, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47b9a8b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32d489e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@714e34b2, org.springframework.security.web.session.SessionManagementFilter@128d247f, org.springframework.security.web.access.ExceptionTranslationFilter@31ad3703, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@154d7c0b]
+13:39:56.267 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b70b4b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@75e30d9f, org.springframework.security.web.header.HeaderWriterFilter@584dddef, org.springframework.security.web.authentication.logout.LogoutFilter@f3c70f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@625e1b7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cb90c65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4aad14b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7eb18c40, org.springframework.security.web.session.SessionManagementFilter@2d9d1924, org.springframework.security.web.access.ExceptionTranslationFilter@11b31c0a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a5a0fd9]
+13:39:56.576 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer CorrelationId  - LiveReload server is running on port 35729
+13:39:56.632 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource CorrelationId  - No URLs will be polled as dynamic configuration sources.
+13:39:56.632 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource CorrelationId  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+13:39:56.720 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Registering beans for JMX exposure on startup
+13:39:56.723 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'refreshScope' has been autodetected for JMX exposure
+13:39:56.723 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'environmentManager' has been autodetected for JMX exposure
+13:39:56.724 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+13:39:56.725 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+13:39:56.725 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+13:39:56.727 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+13:39:56.730 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+13:39:56.733 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+13:39:56.736 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4ec7711f,type=ConfigurationPropertiesRebinder]
+13:39:56.739 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+13:39:56.740 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Registering beans for JMX exposure on startup
+13:39:56.938 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Starting beans in phase 0
+13:39:56.940 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory CorrelationId  - Setting initial instance status as: STARTING
+13:39:56.959 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using JSON encoding codec LegacyJacksonJson
+13:39:56.960 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using JSON decoding codec LegacyJacksonJson
+13:39:56.960 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using XML encoding codec XStreamXml
+13:39:56.960 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider CorrelationId  - Using XML decoding codec XStreamXml
+13:39:57.041 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver CorrelationId  - Resolving eureka endpoints via configuration
+13:39:57.042 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Disable delta property : false
+13:39:57.043 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Single vip registry refresh property : null
+13:39:57.043 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Force full registry fetch : false
+13:39:57.043 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Application is null : false
+13:39:57.044 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Registered Applications size is zero : true
+13:39:57.044 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Application version is -1: true
+13:39:57.044 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Getting all instance registry info from the eureka server
+13:39:57.600 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - The response status is 200
+13:39:57.602 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Starting heartbeat executor: renew interval is: 30
+13:39:57.603 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator CorrelationId  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+13:39:57.606 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Discovery Client initialized at timestamp 1492070997606 with initial instances count: 6
+13:39:57.675 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Registering application timerecords with eureka with status UP
+13:39:57.675 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1492070997675, current=UP, previous=STARTING]
+13:39:57.676 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095: registering service...
+13:39:57.679 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+13:39:57.682 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+13:39:57.685 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+13:39:57.688 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+13:39:57.690 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+13:39:57.693 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+13:39:57.695 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+13:39:57.698 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+13:39:57.700 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+13:39:57.702 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+13:39:57.704 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+13:39:57.707 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+13:39:57.709 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Starting beans in phase 2147483647
+13:39:57.709 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper CorrelationId  - Context refreshed
+13:39:57.711 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper CorrelationId  - Found 1 custom documentation plugin(s)
+13:39:57.719 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner CorrelationId  - Scanning for api listing references
+13:39:57.745 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator CorrelationId  - Generating unique operation named: getEmployeeAttendanceUsingGET_1
+13:39:57.760 [restartedMain] INFO  o.s.c.n.h.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration CorrelationId  - Starting poller
+13:39:57.783 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol CorrelationId  - Initializing ProtocolHandler ["http-nio-8095"]
+13:39:57.783 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol CorrelationId  - Starting ProtocolHandler [http-nio-8095]
+13:39:57.786 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool CorrelationId  - Using a shared selector for servlet write/read
+13:39:57.796 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer CorrelationId  - Tomcat started on port(s): 8095 (http)
+13:39:57.797 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Updating port to 8095
+13:39:57.801 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication CorrelationId  - Started TimeRecordsApplication in 10.595 seconds (JVM running for 767.921)
+13:39:57.934 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - registration status: 204
+13:41:48.395 [Thread-24] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@761da1ec: startup date [Thu Apr 13 13:39:47 IST 2017]; root of context hierarchy
+13:41:48.396 [Thread-24] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f: startup date [Thu Apr 13 13:39:48 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@761da1ec
+13:41:48.397 [Thread-24] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+13:41:48.397 [Thread-24] WARN  c.netflix.discovery.DiscoveryClient CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1492071108397, current=DOWN, previous=UP]
+13:41:48.397 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095: registering service...
+13:41:48.397 [Thread-24] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Shutting down DiscoveryClient ...
+13:41:48.398 [Thread-24] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Unregistering ...
+13:41:48.660 [Thread-24] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - deregister  status: 200
+13:41:48.662 [Thread-24] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - Completed shut down of DiscoveryClient
+13:41:48.664 [Thread-24] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 2147483647
+13:41:48.664 [Thread-24] INFO  o.s.c.s.DefaultLifecycleProcessor CorrelationId  - Stopping beans in phase 0
+13:41:48.665 [Thread-24] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:41:48.665 [Thread-24] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:41:48.666 [Thread-24] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans on shutdown
+13:41:48.666 [Thread-24] INFO  o.s.j.e.a.AnnotationMBeanExporter CorrelationId  - Unregistering JMX-exposed beans
+13:41:48.669 [Thread-24] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2598739a: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:41:48.670 [Thread-24] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:41:48.672 [Thread-24] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@280559f4: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:41:48.672 [Thread-24] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:41:48.673 [Thread-24] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1ab7930a: startup date [Thu Apr 13 13:39:54 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec7711f
+13:41:48.674 [Thread-24] WARN  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1081)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:280)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:250)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:174)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:137)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:389)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:318)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:255)
+	at org.springframework.boot.devtools.restart.Restarter$2.call(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:609)
+13:41:48.676 [Thread-24] INFO  c.c.c.c.config.ConfigurationProvider CorrelationId  - Closed bucket attendance
+13:41:48.679 [cb-io-7-4] INFO  com.couchbase.client.core.node.Node CorrelationId  - Disconnected from Node ec2-52-7-102-164.compute-1.amazonaws.com
+13:41:48.758 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.0.100:timerecords:8095 - registration status: 204
+13:41:50.772 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64834f77: startup date [Thu Apr 13 13:41:50 IST 2017]; root of context hierarchy
+13:41:50.800 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:41:50.802 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:41:51.217 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication CorrelationId  - No active profile set, falling back to default profiles: default
+13:41:51.220 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext CorrelationId  - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8c7b56: startup date [Thu Apr 13 13:41:51 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@64834f77
+13:41:53.438 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'hystrixFeature' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixWebConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration$HystrixWebConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration.class]]
+13:41:53.521 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory CorrelationId  - Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+13:41:53.662 [restartedMain] WARN  o.s.c.a.ConfigurationClassPostProcessor CorrelationId  - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+13:41:53.693 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope CorrelationId  - BeanFactory id=00e89c24-9c47-3cc4-a4ee-a9ace6a18761
+13:41:53.733 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:41:53.766 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$416ad226] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:41:53.768 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping CorrelationId  - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+13:41:53.806 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker CorrelationId  - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8ed1024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:41:54.847 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer CorrelationId  - Tomcat initialized with port(s): 8095 (http)
+13:41:54.848 [restartedMain] INFO  o.a.catalina.core.StandardService CorrelationId  - Starting service Tomcat
+13:41:54.849 [restartedMain] INFO  o.a.catalina.core.StandardEngine CorrelationId  - Starting Servlet Engine: Apache Tomcat/8.5.6
