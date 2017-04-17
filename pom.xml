@@ -209,7 +209,7 @@
        		 <configuration>
         		 <systemPropertyVariables>
            			 <!-- <pact.rootDir>C:\Users\j.chandra.mali\Documents\pactbroker_poc</pact.rootDir> -->
-           			 <pact.rootDir>/home/ubuntu/pact_files</pact.rootDir>
+           			 <pact.rootDir>.</pact.rootDir>
             		<buildDirectory>${project.build.directory}</buildDirectory>
              	  </systemPropertyVariables>
        		 </configuration>
