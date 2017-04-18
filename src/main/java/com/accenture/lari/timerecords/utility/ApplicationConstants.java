@@ -8,5 +8,6 @@ package com.accenture.lari.timerecords.utility;
  *
  */
 public class ApplicationConstants {
+	public static final String WEB_TOKEN = "ABS";
 
 }
