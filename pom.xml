@@ -231,7 +231,8 @@
        		 <version>2.18</version>
           <configuration>
           <excludes>
-            <excluded>**/TimeRecordsConsumerPactTest.java</excluded>
+            <excluded>**/*PactTest.java</excluded>
+          <!--   <excluded>**/TimeRecordsEmployeeDetailsPactTest.java</excluded> -->
           </excludes>
           </configuration>
         </plugin>
