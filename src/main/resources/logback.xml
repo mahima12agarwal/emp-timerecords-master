@@ -25,7 +25,7 @@
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender"> 
      <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
      <encoder>
-	     <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
+	     <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} SpanId %X{X-B3-SpanId} TraceId %X{X-B3-TraceId} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
 	  </encoder>
 	</appender>
 
@@ -34,7 +34,7 @@
       <file>${LOG_PATH}</file>
       <append>true</append>
       <encoder>
-         <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
+         <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} SpanId %X{X-B3-SpanId} TraceId %X{X-B3-TraceId} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
       </encoder>
    </appender>
     
