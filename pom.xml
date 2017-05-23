@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.2.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -228,7 +228,18 @@
             		<buildDirectory>${project.build.directory}</buildDirectory>
              	  </systemPropertyVariables>
        		 </configuration>
-      		</plugin>
+      	</plugin>
+      	 <!-- Added for git check-in info -->
+        <plugin>
+			    <groupId>pl.project13.maven</groupId>
+			    <artifactId>git-commit-id-plugin</artifactId>
+<!-- 			    <version>2.2.1</version> -->
+			<configuration>
+<!--                 <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> -->
+					  <skip>true</skip>
+                <!-- more config here as you see fit -->
+            </configuration>
+		</plugin>
 	</plugins>
   </build>
     
@@ -251,16 +262,7 @@
           </excludes>
           </configuration>
         </plugin>
-        <!-- Added for git check-in info -->
-        <plugin>
-			    <groupId>pl.project13.maven</groupId>
-			    <artifactId>git-commit-id-plugin</artifactId>
-			    <version>2.1.13</version>
-			<configuration>
-                <dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
-                <!-- more config here as you see fit -->
-            </configuration>
-		</plugin>
+       
       </plugins>
     </build>
   </profile>  
