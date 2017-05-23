@@ -1,0 +1,683 @@
+10:20:08.521 [background-preinit] INFO  o.h.validator.internal.util.Version SpanId  TraceId  CorrelationId  - HV000001: Hibernate Validator 5.2.4.Final
+10:20:09.894 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1c9dc9c7: startup date [Tue May 23 10:20:09 IST 2017]; root of context hierarchy
+10:20:10.791 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:20:10.835 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$31c967d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:12.196 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication SpanId  TraceId  CorrelationId  - No active profile set, falling back to default profiles: default
+10:20:12.245 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1: startup date [Tue May 23 10:20:12 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1c9dc9c7
+10:20:17.717 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory SpanId  TraceId  CorrelationId  - Overriding bean definition for bean 'hystrixFeature' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixWebConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration$HystrixWebConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration; factoryMethodName=hystrixFeature; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/hystrix/HystrixCircuitBreakerConfiguration.class]]
+10:20:18.223 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory SpanId  TraceId  CorrelationId  - Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+10:20:19.073 [restartedMain] WARN  o.s.c.a.ConfigurationClassPostProcessor SpanId  TraceId  CorrelationId  - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+10:20:19.641 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope SpanId  TraceId  CorrelationId  - BeanFactory id=66d093d6-cf5a-39d8-9944-4735699a3a21
+10:20:19.917 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:20:20.663 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ba4729d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:20.749 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping SpanId  TraceId  CorrelationId  - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+10:20:20.772 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport' of type [class org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport$$EnhancerBySpringCGLIB$$52f10298] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:22.004 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$31c967d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:22.075 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'org.springframework.cloud.sleuth.instrument.web.client.feign.TraceFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [class org.springframework.cloud.sleuth.instrument.web.client.feign.TraceFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration$$EnhancerBySpringCGLIB$$55413d9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:22.118 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'org.springframework.cloud.sleuth.instrument.web.client.feign.TraceFeignClientAutoConfiguration' of type [class org.springframework.cloud.sleuth.instrument.web.client.feign.TraceFeignClientAutoConfiguration$$EnhancerBySpringCGLIB$$4ba2dcda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:22.161 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'traceFeignObjectWrapper' of type [class org.springframework.cloud.sleuth.instrument.web.client.feign.TraceFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:20:25.689 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer SpanId  TraceId  CorrelationId  - Tomcat initialized with port(s): 8095 (http)
+10:20:26.008 [restartedMain] INFO  o.a.catalina.core.StandardService SpanId  TraceId  CorrelationId  - Starting service Tomcat
+10:20:26.011 [restartedMain] INFO  o.a.catalina.core.StandardEngine SpanId  TraceId  CorrelationId  - Starting Servlet Engine: Apache Tomcat/8.5.6
+10:20:27.295 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - Initializing Spring embedded WebApplicationContext
+10:20:27.297 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader SpanId  TraceId  CorrelationId  - Root WebApplicationContext: initialization completed in 15052 ms
+10:20:31.597 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'metricsFilter' to: [/*]
+10:20:31.598 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'characterEncodingFilter' to: [/*]
+10:20:31.599 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'traceFilter' to: [/*]
+10:20:31.599 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10:20:31.600 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10:20:31.601 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'requestContextFilter' to: [/*]
+10:20:31.603 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'springSecurityFilterChain' to: [/*]
+10:20:31.604 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+10:20:31.604 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'gatewayHeaderFilter' to urls: [/*]
+10:20:31.605 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean SpanId  TraceId  CorrelationId  - Mapping filter: 'applicationContextIdFilter' to: [/*]
+10:20:31.606 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean SpanId  TraceId  CorrelationId  - Mapping servlet: 'dispatcherServlet' to [/]
+10:20:31.608 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean SpanId  TraceId  CorrelationId  - Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+10:20:33.038 [restartedMain] INFO  c.c.client.core.CouchbaseCore SpanId  TraceId  CorrelationId  - CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, searchServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.2.8 (git: 2.2.8, core: 1.2.9), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS, powers of 2; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS, powers of 2; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, tcpNodelayEnabled=true, mutationTokensEnabled=false, socketConnectTimeout=1000, dcpConnectionBufferSize=20971520, dcpConnectionBufferAckThreshold=0.2, dcpConnectionName=dcp/core-io, callbacksOnIoPool=false, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=5000, disconnectTimeout=25000, dnsSrvEnabled=false}
+10:20:33.530 [cb-io-1-1] INFO  com.couchbase.client.core.node.Node SpanId  TraceId  CorrelationId  - Connected to Node localhost
+10:20:33.598 [cb-io-1-1] INFO  com.couchbase.client.core.node.Node SpanId  TraceId  CorrelationId  - Disconnected from Node localhost
+10:20:35.550 [cb-io-1-2] INFO  com.couchbase.client.core.node.Node SpanId  TraceId  CorrelationId  - Connected to Node localhost
+10:20:35.688 [cb-computations-4] INFO  c.c.c.c.config.ConfigurationProvider SpanId  TraceId  CorrelationId  - Opened bucket attendance
+10:20:37.640 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c3f3bb8: startup date [Tue May 23 10:20:37 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:20:37.675 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:20:40.067 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - jolokia: No access restrictor found, access to any MBean is allowed
+10:20:41.359 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@83a888d: startup date [Tue May 23 10:20:41 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:20:41.374 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:20:41.413 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@42aca5a9: startup date [Tue May 23 10:20:41 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:20:41.424 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:20:44.248 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/timerecords],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance()
+10:20:44.250 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/timerecords/{empId}],methods=[GET]}" onto public java.util.Collection<com.accenture.lari.timerecords.domain.Timerecords> com.accenture.lari.timerecords.resources.TimeRecordsController.getEmployeeAttendance(java.lang.Integer)
+10:20:44.251 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/timerecords],methods=[POST]}" onto public java.lang.Boolean com.accenture.lari.timerecords.resources.TimeRecordsController.submitEmployeeAttanceService(com.accenture.lari.timerecords.domain.Timerecords)
+10:20:44.252 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+10:20:44.265 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+10:20:44.267 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+10:20:44.268 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+10:20:44.271 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10:20:44.272 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:20:44.610 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource SpanId  TraceId  CorrelationId  - No URLs will be polled as dynamic configuration sources.
+10:20:44.611 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource SpanId  TraceId  CorrelationId  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:20:44.665 [restartedMain] INFO  c.n.config.DynamicPropertyFactory SpanId  TraceId  CorrelationId  - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@63dfe031
+10:20:47.110 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+10:20:47.111 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+10:20:47.113 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+10:20:47.116 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.118 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+10:20:47.120 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+10:20:47.122 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.124 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+10:20:47.125 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.127 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+10:20:47.128 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.131 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.133 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+10:20:47.134 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.136 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+10:20:47.140 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.142 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.144 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/jolokia/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+10:20:47.145 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+10:20:47.147 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.148 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+10:20:47.150 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.152 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+10:20:47.153 [restartedMain] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping SpanId  TraceId  CorrelationId  - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+10:20:51.674 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter SpanId  TraceId  CorrelationId  - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1: startup date [Tue May 23 10:20:12 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1c9dc9c7
+10:20:52.841 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping SpanId  TraceId  CorrelationId  - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:20:52.842 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping SpanId  TraceId  CorrelationId  - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:20:53.402 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping SpanId  TraceId  CorrelationId  - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:20:55.392 [restartedMain] INFO  o.s.b.a.s.AuthenticationManagerConfiguration SpanId  TraceId  CorrelationId  - 
+
+Using default security password: fde3c2c3-3e8d-4cde-a264-6b11ac1112c8
+
+10:20:57.316 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain SpanId  TraceId  CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+10:20:58.132 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain SpanId  TraceId  CorrelationId  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4853c2db, org.springframework.security.web.context.SecurityContextPersistenceFilter@21b1353d, org.springframework.security.web.header.HeaderWriterFilter@3369c27e, org.springframework.security.web.authentication.logout.LogoutFilter@263dc7dc, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@4e85198f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@249ff83b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69723637, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@277cecfc, org.springframework.security.web.session.SessionManagementFilter@54306fa5, org.springframework.security.web.access.ExceptionTranslationFilter@385f2592, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f4d4575]
+10:20:58.512 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain SpanId  TraceId  CorrelationId  - Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@1a1aae3b, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f3ca7fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ae886fe, org.springframework.security.web.header.HeaderWriterFilter@2cdc3e7a, org.springframework.security.web.authentication.logout.LogoutFilter@665f446f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1b6867f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@113b085, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c716133, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4474d2f5, org.springframework.security.web.session.SessionManagementFilter@2c56834a, org.springframework.security.web.access.ExceptionTranslationFilter@2908430d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bf17d32]
+10:20:58.525 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain SpanId  TraceId  CorrelationId  - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21f873f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@34ec09bd, org.springframework.security.web.header.HeaderWriterFilter@1aa11f08, org.springframework.security.web.authentication.logout.LogoutFilter@6c5a4134, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@38af1ce3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d119637, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f5a9dc2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5eca650f, org.springframework.security.web.session.SessionManagementFilter@1ed1a85d, org.springframework.security.web.access.ExceptionTranslationFilter@32cd6d2a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c144e62]
+10:21:03.914 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer SpanId  TraceId  CorrelationId  - LiveReload server is running on port 35729
+10:21:04.199 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource SpanId  TraceId  CorrelationId  - No URLs will be polled as dynamic configuration sources.
+10:21:04.200 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource SpanId  TraceId  CorrelationId  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:21:04.993 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler SpanId  TraceId  CorrelationId  - Initializing ExecutorService 
+10:21:05.324 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Registering beans for JMX exposure on startup
+10:21:05.344 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Bean with name 'refreshScope' has been autodetected for JMX exposure
+10:21:05.348 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Bean with name 'environmentManager' has been autodetected for JMX exposure
+10:21:05.354 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+10:21:05.356 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+10:21:05.363 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+10:21:05.371 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+10:21:05.617 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+10:21:05.651 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+10:21:05.671 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=5264e8c1,type=ConfigurationPropertiesRebinder]
+10:21:05.697 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+10:21:05.700 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Registering beans for JMX exposure on startup
+10:21:06.247 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - jolokia: No access restrictor found, access to any MBean is allowed
+10:21:06.254 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - jolokia: jolokia:type=Config is already registered. Adding it with jolokia:type=Config,uuid=02b10969-3fe4-4f17-821f-b84327292a8e, but you should revise your setup in order to either use a qualifier or ensure, that only a single agent gets registered (otherwise history functionality might not work)
+10:21:06.255 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - jolokia: Cannot register (legacy) MBean handler for config store with name jmx4perl:type=Config since it already exists. This is the case if another agent has been already started within the same JVM. The registration is skipped.
+10:21:06.255 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - jolokia: Jolokia Discovery MBean registration is skipped because there is already one registered.
+10:21:06.443 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor SpanId  TraceId  CorrelationId  - Starting beans in phase 0
+10:21:06.457 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory SpanId  TraceId  CorrelationId  - Setting initial instance status as: STARTING
+10:21:09.167 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider SpanId  TraceId  CorrelationId  - Using JSON encoding codec LegacyJacksonJson
+10:21:09.167 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider SpanId  TraceId  CorrelationId  - Using JSON decoding codec LegacyJacksonJson
+10:21:10.752 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider SpanId  TraceId  CorrelationId  - Using XML encoding codec XStreamXml
+10:21:10.753 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider SpanId  TraceId  CorrelationId  - Using XML decoding codec XStreamXml
+10:21:13.233 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver SpanId  TraceId  CorrelationId  - Resolving eureka endpoints via configuration
+10:21:13.558 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Disable delta property : false
+10:21:13.559 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Single vip registry refresh property : null
+10:21:13.559 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Force full registry fetch : false
+10:21:13.561 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Application is null : false
+10:21:13.561 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Registered Applications size is zero : true
+10:21:13.564 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Application version is -1: true
+10:21:13.564 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Getting all instance registry info from the eureka server
+10:21:14.549 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - The response status is 200
+10:21:14.551 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Starting heartbeat executor: renew interval is: 30
+10:21:14.555 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator SpanId  TraceId  CorrelationId  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:21:14.569 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Discovery Client initialized at timestamp 1495515074559 with initial instances count: 1
+10:21:14.834 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Registering application timerecords with eureka with status UP
+10:21:14.837 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1495515074836, current=UP, previous=STARTING]
+10:21:14.849 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.43.242:timerecords:8095: registering service...
+10:21:14.871 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+10:21:14.909 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+10:21:14.936 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+10:21:14.946 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+10:21:14.953 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+10:21:14.973 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+10:21:14.978 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+10:21:14.986 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+10:21:14.994 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+10:21:15.002 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+10:21:15.007 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+10:21:15.022 [restartedMain] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+10:21:15.031 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor SpanId  TraceId  CorrelationId  - Starting beans in phase 2147483647
+10:21:15.031 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper SpanId  TraceId  CorrelationId  - Context refreshed
+10:21:15.115 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper SpanId  TraceId  CorrelationId  - Found 1 custom documentation plugin(s)
+10:21:15.189 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner SpanId  TraceId  CorrelationId  - Scanning for api listing references
+10:21:15.625 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator SpanId  TraceId  CorrelationId  - Generating unique operation named: getEmployeeAttendanceUsingGET_1
+10:21:16.034 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.43.242:timerecords:8095 - registration status: 204
+10:21:16.135 [restartedMain] INFO  o.s.c.n.h.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration SpanId  TraceId  CorrelationId  - Starting poller
+10:21:16.361 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol SpanId  TraceId  CorrelationId  - Initializing ProtocolHandler ["http-nio-8095"]
+10:21:16.471 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol SpanId  TraceId  CorrelationId  - Starting ProtocolHandler [http-nio-8095]
+10:21:16.474 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool SpanId  TraceId  CorrelationId  - Using a shared selector for servlet write/read
+10:21:16.510 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer SpanId  TraceId  CorrelationId  - Tomcat started on port(s): 8095 (http)
+10:21:16.511 [restartedMain] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Updating port to 8095
+10:21:16.516 [restartedMain] INFO  c.a.l.t.TimeRecordsApplication SpanId  TraceId  CorrelationId  - Started TimeRecordsApplication in 70.464 seconds (JVM running for 75.292)
+10:22:06.482 [http-nio-8095-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:22:06.482 [http-nio-8095-exec-1] INFO  o.s.web.servlet.DispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet 'dispatcherServlet': initialization started
+10:22:06.586 [http-nio-8095-exec-1] INFO  o.s.web.servlet.DispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet 'dispatcherServlet': initialization completed in 104 ms
+10:26:13.587 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver SpanId  TraceId  CorrelationId  - Resolving eureka endpoints via configuration
+10:29:44.451 [http-nio-8095-exec-6] INFO  c.a.l.t.r.TimeRecordsController SpanId c164059efc6157cc TraceId 39f0ad97d921f3cf CorrelationId de4bb624-86f0-4613-a814-c432ff0cb686 - AttendanceController ::: getEmployeeAttendance::: All employees ::: START
+10:29:44.715 [http-nio-8095-exec-6] INFO  c.a.l.t.s.i.TimeRecordsServiceImpl SpanId c164059efc6157cc TraceId 39f0ad97d921f3cf CorrelationId de4bb624-86f0-4613-a814-c432ff0cb686 - Attendance Calculator::: getCalculateAttendanceEmployees::: Start
+10:29:45.939 [http-nio-8095-exec-6] INFO  c.a.l.t.r.TimeRecordsController SpanId c164059efc6157cc TraceId 39f0ad97d921f3cf CorrelationId de4bb624-86f0-4613-a814-c432ff0cb686 - AttendanceController ::: getEmployeeAttendance::: All employees ::: END
+10:29:52.024 [http-nio-8095-exec-7] INFO  c.a.l.t.r.TimeRecordsController SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - AttendanceController ::: getEmployeeAttendance ::: START
+10:29:52.049 [http-nio-8095-exec-7] INFO  c.a.l.t.s.i.TimeRecordsServiceImpl SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - getCalculateAttendanceEmployee::: START
+10:29:52.075 [http-nio-8095-exec-7] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1030252d: startup date [Tue May 23 10:29:52 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:29:52.161 [http-nio-8095-exec-7] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:29:52.433 [http-nio-8095-exec-7] INFO  c.n.config.ChainedDynamicProperty SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - Flipping property: empdetailsmaster.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+10:29:52.488 [http-nio-8095-exec-7] INFO  c.n.u.c.ShutdownEnabledTimer SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - Shutdown hook installed for: NFLoadBalancer-PingTimer-empdetailsmaster
+10:29:52.496 [http-nio-8095-exec-7] INFO  c.n.loadbalancer.BaseLoadBalancer SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - Client:empdetailsmaster instantiated a LoadBalancer:DynamicServerListLoadBalancer:{NFLoadBalancer:name=empdetailsmaster,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+10:29:52.503 [http-nio-8095-exec-7] INFO  c.n.l.DynamicServerListLoadBalancer SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - Using serverListUpdater PollingServerListUpdater
+10:29:52.508 [http-nio-8095-exec-7] INFO  c.n.l.DynamicServerListLoadBalancer SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - DynamicServerListLoadBalancer for client empdetailsmaster initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=empdetailsmaster,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@31890371
+10:29:52.741 [http-nio-8095-exec-7] ERROR c.a.l.t.s.i.TimeRecordsServiceImpl SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - handleGetCalculateAttendanceEmployee ::: Fall in to hystrix fallback method: com.netflix.hystrix.exception.HystrixRuntimeException: EmployeeDetailsService#getEmployeeDetails(String,long) failed and no fallback available.
+10:29:52.742 [http-nio-8095-exec-7] INFO  c.a.l.t.r.TimeRecordsController SpanId 73bfd6e655967818 TraceId f6cde9b1b9742080 CorrelationId f8e10f65-41ae-4351-b77d-1c0cc910eb51 - AttendanceController ::: getEmployeeAttendance ::: END
+10:30:17.491 [http-nio-8095-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId bb8620857655cca3 TraceId c04d8f8af483ab1d CorrelationId 0eef5053-46c4-4e73-971c-c6cbb5015753 - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "1233info"
+10:30:17.492 [http-nio-8095-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId bb8620857655cca3 TraceId c04d8f8af483ab1d CorrelationId 0eef5053-46c4-4e73-971c-c6cbb5015753 - Resolved exception caused by Handler execution: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "1233info"
+10:30:22.059 [http-nio-8095-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId 5a5e4c24344b1b2b TraceId 98413bd9bad6a57c CorrelationId 9dcf5b04-db46-48a7-9348-57827c39d6df - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "info"
+10:30:22.060 [http-nio-8095-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId 5a5e4c24344b1b2b TraceId 98413bd9bad6a57c CorrelationId 9dcf5b04-db46-48a7-9348-57827c39d6df - Resolved exception caused by Handler execution: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "info"
+10:30:37.026 [http-nio-8095-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId 0305aed91a221105 TraceId 19a7887a80ab4438 CorrelationId f17a493d-0ac0-4785-a1ee-2de9a357ba2e - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "info"
+10:30:37.026 [http-nio-8095-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver SpanId 0305aed91a221105 TraceId 19a7887a80ab4438 CorrelationId f17a493d-0ac0-4785-a1ee-2de9a357ba2e - Resolved exception caused by Handler execution: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "info"
+10:31:13.609 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver SpanId  TraceId  CorrelationId  - Resolving eureka endpoints via configuration
+10:31:17.219 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin SpanId  TraceId  CorrelationId  - Application shutdown requested.
+10:31:17.219 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1: startup date [Tue May 23 10:20:12 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1c9dc9c7
+10:31:17.221 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+10:31:17.221 [RMI TCP Connection(2)-192.168.43.242] WARN  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Saw local status change event StatusChangeEvent [timestamp=1495515677221, current=DOWN, previous=UP]
+10:31:17.222 [RMI TCP Connection(2)-192.168.43.242] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Shutting down DiscoveryClient ...
+10:31:17.223 [RMI TCP Connection(2)-192.168.43.242] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Unregistering ...
+10:31:17.223 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.43.242:timerecords:8095: registering service...
+10:31:17.247 [RMI TCP Connection(2)-192.168.43.242] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.43.242:timerecords:8095 - deregister  status: 200
+10:31:17.251 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - DiscoveryClient_TIMERECORDS/192.168.43.242:timerecords:8095 - registration status: 204
+10:31:17.253 [RMI TCP Connection(2)-192.168.43.242] INFO  c.netflix.discovery.DiscoveryClient SpanId  TraceId  CorrelationId  - Completed shut down of DiscoveryClient
+10:31:17.256 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.s.DefaultLifecycleProcessor SpanId  TraceId  CorrelationId  - Stopping beans in phase 2147483647
+10:31:17.263 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.s.DefaultLifecycleProcessor SpanId  TraceId  CorrelationId  - Stopping beans in phase 0
+10:31:17.266 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Unregistering JMX-exposed beans on shutdown
+10:31:17.267 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter SpanId  TraceId  CorrelationId  - Unregistering JMX-exposed beans
+10:31:17.268 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Unregistering JMX-exposed beans on shutdown
+10:31:17.272 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.j.e.a.AnnotationMBeanExporter SpanId  TraceId  CorrelationId  - Unregistering JMX-exposed beans
+10:31:17.280 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1030252d: startup date [Tue May 23 10:29:52 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:31:17.281 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+10:31:17.283 [RMI TCP Connection(2)-192.168.43.242] INFO  c.n.u.c.ShutdownEnabledTimer SpanId  TraceId  CorrelationId  - Shutdown hook removed for: NFLoadBalancer-PingTimer-empdetailsmaster
+10:31:17.286 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@83a888d: startup date [Tue May 23 10:20:41 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:31:17.287 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+10:31:17.288 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@42aca5a9: startup date [Tue May 23 10:20:41 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:31:17.289 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+10:31:17.289 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3c3f3bb8: startup date [Tue May 23 10:20:37 IST 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5264e8c1
+10:31:17.290 [RMI TCP Connection(2)-192.168.43.242] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration SpanId  TraceId  CorrelationId  - Unregistering application timerecords with eureka with status DOWN
+10:31:17.309 [RMI TCP Connection(2)-192.168.43.242] INFO  c.c.c.c.config.ConfigurationProvider SpanId  TraceId  CorrelationId  - Closed bucket attendance
+10:31:17.311 [cb-io-1-2] INFO  com.couchbase.client.core.node.Node SpanId  TraceId  CorrelationId  - Disconnected from Node localhost
+10:31:17.813 [RMI TCP Connection(2)-192.168.43.242] INFO  o.a.coyote.http11.Http11NioProtocol SpanId  TraceId  CorrelationId  - Pausing ProtocolHandler ["http-nio-8095"]
+10:31:17.865 [RMI TCP Connection(2)-192.168.43.242] INFO  o.a.catalina.core.StandardService SpanId  TraceId  CorrelationId  - Stopping service Tomcat
+10:31:17.877 [localhost-startStop-2] INFO  o.a.catalina.core.StandardWrapper SpanId  TraceId  CorrelationId  - Waiting for 2 instance(s) to be deallocated for Servlet [dispatcherServlet]
+10:31:18.879 [localhost-startStop-2] INFO  o.a.catalina.core.StandardWrapper SpanId  TraceId  CorrelationId  - Waiting for 2 instance(s) to be deallocated for Servlet [dispatcherServlet]
+10:31:19.881 [localhost-startStop-2] INFO  o.a.catalina.core.StandardWrapper SpanId  TraceId  CorrelationId  - Waiting for 2 instance(s) to be deallocated for Servlet [dispatcherServlet]
+10:31:20.110 [localhost-startStop-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] SpanId  TraceId  CorrelationId  - Destroying Spring FrameworkServlet 'dispatcherServlet'
+10:31:20.168 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxIoScheduler-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.170 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.172 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.lang.Thread.sleep(Native Method)
+ com.netflix.hystrix.contrib.sample.stream.HystrixSampleSseServlet.handleRequest(HystrixSampleSseServlet.java:165)
+ com.netflix.hystrix.contrib.sample.stream.HystrixSampleSseServlet.doGet(HystrixSampleSseServlet.java:74)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:157)
+ org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+ org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(ServletWrappingEndpoint.java:76)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.lang.reflect.Method.invoke(Method.java:498)
+ org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+ org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+ org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+ org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+ org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+ org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+ org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+ org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+ org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ com.accenture.lari.utils.GatewayHeaderFilter.doFilter(GatewayHeaderFilter.java:45)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+ org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+ org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+ org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.cloud.sleuth.instrument.web.TraceFilter.doFilter(TraceFilter.java:141)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:107)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.176 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxIoScheduler-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.179 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.lang.Thread.sleep(Native Method)
+ com.netflix.hystrix.contrib.sample.stream.HystrixSampleSseServlet.handleRequest(HystrixSampleSseServlet.java:165)
+ com.netflix.hystrix.contrib.sample.stream.HystrixSampleSseServlet.doGet(HystrixSampleSseServlet.java:74)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:157)
+ org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+ org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(ServletWrappingEndpoint.java:76)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.lang.reflect.Method.invoke(Method.java:498)
+ org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+ org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+ org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+ org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+ org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+ org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+ org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+ org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+ org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ com.accenture.lari.utils.GatewayHeaderFilter.doFilter(GatewayHeaderFilter.java:45)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+ org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+ org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+ org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+ org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.cloud.sleuth.instrument.web.TraceFilter.doFilter(TraceFilter.java:141)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:107)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.183 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxIoScheduler-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.186 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxIoScheduler-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.187 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxIoScheduler-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.189 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxComputationScheduler-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.191 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxComputationScheduler-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.192 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [RxComputationScheduler-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.193 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.195 [localhost-startStop-2] WARN  o.a.c.loader.WebappClassLoaderBase SpanId  TraceId  CorrelationId  - The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+10:31:20.200 [RMI TCP Connection(2)-192.168.43.242] INFO  o.a.coyote.http11.Http11NioProtocol SpanId  TraceId  CorrelationId  - Stopping ProtocolHandler ["http-nio-8095"]
+10:31:20.215 [http-nio-8095-exec-9] ERROR o.a.c.c.C.[Tomcat].[localhost] SpanId 47c2883efc19264d TraceId fa03d660ca78108d CorrelationId 0b3ea490-0a15-4baf-99a1-25bacb9f712c - Exception Processing null
+java.lang.NullPointerException: null
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:245)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.216 [http-nio-8095-exec-5] ERROR o.a.c.c.C.[Tomcat].[localhost] SpanId c385d7291162db1c TraceId a91e27732274c5cb CorrelationId 5b8d77f6-52bf-43de-8c87-8f348e77e739 - Exception Processing null
+java.lang.NullPointerException: null
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:245)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.218 [http-nio-8095-exec-9] ERROR o.a.coyote.http11.Http11Processor SpanId 47c2883efc19264d TraceId fa03d660ca78108d CorrelationId 0b3ea490-0a15-4baf-99a1-25bacb9f712c - Error processing request
+java.lang.NullPointerException: null
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:389)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.219 [http-nio-8095-exec-5] ERROR o.a.coyote.http11.Http11Processor SpanId c385d7291162db1c TraceId a91e27732274c5cb CorrelationId 5b8d77f6-52bf-43de-8c87-8f348e77e739 - Error processing request
+java.lang.NullPointerException: null
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:389)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.220 [http-nio-8095-exec-9] ERROR o.a.coyote.http11.Http11Processor SpanId 47c2883efc19264d TraceId fa03d660ca78108d CorrelationId 0b3ea490-0a15-4baf-99a1-25bacb9f712c - Error finishing response
+java.lang.NullPointerException: null
+	at org.apache.coyote.http11.Http11OutputBuffer.commit(Http11OutputBuffer.java:332)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1289)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:261)
+	at org.apache.coyote.http11.Http11Processor.endRequest(Http11Processor.java:1458)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:824)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.221 [http-nio-8095-exec-5] ERROR o.a.coyote.http11.Http11Processor SpanId c385d7291162db1c TraceId a91e27732274c5cb CorrelationId 5b8d77f6-52bf-43de-8c87-8f348e77e739 - Error finishing response
+java.lang.NullPointerException: null
+	at org.apache.coyote.http11.Http11OutputBuffer.commit(Http11OutputBuffer.java:332)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1289)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:261)
+	at org.apache.coyote.http11.Http11Processor.endRequest(Http11Processor.java:1458)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:824)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+10:31:20.249 [RMI TCP Connection(2)-192.168.43.242] INFO  o.a.coyote.http11.Http11NioProtocol SpanId  TraceId  CorrelationId  - Destroying ProtocolHandler ["http-nio-8095"]
+10:31:20.249 [Thread-18] INFO  c.n.l.PollingServerListUpdater SpanId  TraceId  CorrelationId  - Shutting down the Executor Pool for PollingServerListUpdater
+10:32:47.077 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.accenture.leanarchri.timerecords.TimeRecordsApplicationTests], using SpringBootContextLoader
+10:32:47.104 [main] INFO  o.s.t.c.s.AbstractContextLoader SpanId  TraceId  CorrelationId  - Could not detect default resource locations for test class [com.accenture.leanarchri.timerecords.TimeRecordsApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:32:47.271 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+10:32:47.323 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f09733f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e350b40, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@41a0aa7d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2794eab6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6340e5f0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@45099dd3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@13e344d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ffaf86, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6574a52c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c1a5b54, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1c7696c6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@60099951]
+10:32:47.334 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.accenture.leanarchri.timerecords.TimeRecordsApplicationTests], using SpringBootContextLoader
+10:32:47.337 [main] INFO  o.s.t.c.s.AbstractContextLoader SpanId  TraceId  CorrelationId  - Could not detect default resource locations for test class [com.accenture.leanarchri.timerecords.TimeRecordsApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:32:47.380 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+10:32:47.393 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper SpanId  TraceId  CorrelationId  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7ce026d3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ce69770, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1750fbeb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b247367, org.springframework.test.context.transaction.TransactionalTestExecutionListener@268f106e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e9a5ed8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7e057f43, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6c284af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5890e879, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6440112d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@31ea9581, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@231f98ef]
+10:32:50.453 [background-preinit] INFO  o.h.validator.internal.util.Version SpanId  TraceId  CorrelationId  - HV000001: Hibernate Validator 5.2.4.Final
+10:32:51.674 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@74a6a609: startup date [Tue May 23 10:32:51 IST 2017]; root of context hierarchy
+10:32:52.225 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:32:52.275 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker SpanId  TraceId  CorrelationId  - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$962f0d8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:32:54.851 [main] INFO  c.a.l.t.TimeRecordsApplicationTests SpanId  TraceId  CorrelationId  - No active profile set, falling back to default profiles: default
+10:32:54.862 [main] INFO  o.s.w.c.s.GenericWebApplicationContext SpanId  TraceId  CorrelationId  - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bc425e7: startup date [Tue May 23 10:32:54 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74a6a609
+10:32:54.903 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor SpanId  TraceId  CorrelationId  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:32:54.945 [main] INFO  c.a.l.t.TimeRecordsApplicationTests SpanId  TraceId  CorrelationId  - Started TimeRecordsApplicationTests in 7.219 seconds (JVM running for 10.721)
+10:32:55.085 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext SpanId  TraceId  CorrelationId  - Initializing Spring FrameworkServlet ''
+10:32:55.086 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization started
+10:32:55.314 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization completed in 227 ms
+10:32:55.362 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords/1234] in DispatcherServlet with name ''
+10:32:55.365 [main] INFO  c.a.l.t.TimeRecordsApplicationTests SpanId  TraceId  CorrelationId  - Result::: org.springframework.test.web.servlet.MockMvc$1@17b64941
+10:32:55.366 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords/1234] in DispatcherServlet with name ''
+10:32:55.457 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext SpanId  TraceId  CorrelationId  - Initializing Spring FrameworkServlet ''
+10:32:55.459 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization started
+10:32:55.473 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization completed in 14 ms
+10:32:55.478 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords] in DispatcherServlet with name ''
+10:32:55.481 [main] INFO  c.a.l.t.TimeRecordsApplicationTests SpanId  TraceId  CorrelationId  - Result::: org.springframework.test.web.servlet.MockMvc$1@ab20d7c
+10:32:55.485 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords] in DispatcherServlet with name ''
+10:32:55.498 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext SpanId  TraceId  CorrelationId  - Initializing Spring FrameworkServlet ''
+10:32:55.498 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization started
+10:32:55.519 [main] INFO  o.s.t.w.s.TestDispatcherServlet SpanId  TraceId  CorrelationId  - FrameworkServlet '': initialization completed in 20 ms
+10:32:55.521 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords] in DispatcherServlet with name ''
+10:32:55.522 [main] INFO  c.a.l.t.TimeRecordsApplicationTests SpanId  TraceId  CorrelationId  - Result::: org.springframework.test.web.servlet.MockMvc$1@13f9ad9
+10:32:55.523 [main] WARN  o.s.web.servlet.PageNotFound SpanId  TraceId  CorrelationId  - No mapping found for HTTP request with URI [/timerecords] in DispatcherServlet with name ''
+10:32:55.534 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext SpanId  TraceId  CorrelationId  - Closing org.springframework.web.context.support.GenericWebApplicationContext@1bc425e7: startup date [Tue May 23 10:32:54 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74a6a609
