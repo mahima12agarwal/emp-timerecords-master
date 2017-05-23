@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.3.RELEASE</version>
+		<version>1.5.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -180,7 +180,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Camden.SR3</version>
+				<version>Camden.SR6</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -230,16 +230,16 @@
        		 </configuration>
       	</plugin>
       	 <!-- Added for git check-in info -->
-        <plugin>
-			    <groupId>pl.project13.maven</groupId>
-			    <artifactId>git-commit-id-plugin</artifactId>
-<!-- 			    <version>2.2.1</version> -->
-			<configuration>
-<!--                 <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> -->
-					  <skip>true</skip>
-                <!-- more config here as you see fit -->
-            </configuration>
-		</plugin>
+<!--         <plugin> -->
+<!-- 			    <groupId>pl.project13.maven</groupId> -->
+<!-- 			    <artifactId>git-commit-id-plugin</artifactId> -->
+<!-- 			    <version>2.2.1</version> --> 
+<!-- 			<configuration> -->
+<!--                  <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> --> 
+<!-- 					  <skip>true</skip> -->
+<!--                 more config here as you see fit -->
+<!--             </configuration> -->
+<!-- 		</plugin> -->
 	</plugins>
   </build>
     
