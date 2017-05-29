@@ -2,23 +2,3 @@ server:
   port: 8095
 app:
   artifactId: emp_timerecords_v
----
-spring:
-  profiles: native
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-      
-      
----
-spring:
-  profiles: default
-eureka:
-  instance:
-    hostname: 54.145.29.160
-  client:
-    serviceUrl:
-      defaultZone: http://54.145.29.160:8761/eureka/

@@ -1,12 +1,29 @@
 spring:
   application:
     name: timerecords
-
----
-spring:
-  profiles: default,native
   cloud:
     config:
       discovery:
         enabled: true
         serviceId: leanarch-config-server
+
+eureka:
+  instance:
+    hostname: 54.145.29.160
+  client:
+    serviceUrl:
+      defaultZone: http://54.145.29.160:8761/eureka/
+
+---
+spring:
+  profiles: native
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+---
+
