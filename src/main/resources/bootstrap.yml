@@ -11,7 +11,7 @@ spring:
   profiles: default
 eureka:
   instance:
-    hostname: 54.145.29.160
+    hostname: 52.7.102.164
   client:
     serviceUrl:
       defaultZone: http://54.145.29.160:8761/eureka/
