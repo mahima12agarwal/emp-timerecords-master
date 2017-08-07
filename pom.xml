@@ -260,7 +260,7 @@
 			        <!--
 			            Configure the location of the .git directory.
 			        -->
-        			<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
+        			<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
    				 </configuration>
 			    
 			</plugin>
