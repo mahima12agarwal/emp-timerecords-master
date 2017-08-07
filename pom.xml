@@ -255,13 +255,17 @@
 			    <groupId>pl.project13.maven</groupId>
 			    <artifactId>git-commit-id-plugin</artifactId>
 			    <version>2.1.13</version>
-			    
-			     <configuration>
-			        <!--
-			            Configure the location of the .git directory.
-			        -->
-        			<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-   				 </configuration>
+			   	 <executions>
+	                <execution>
+	                    <goals>
+	                        <goal>revision</goal>
+	                     </goals>
+	                </execution>
+           	 	</executions>
+		       <configuration>
+		        
+       				<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+  			   </configuration>
 			    
 			</plugin>
 		<!-- ends here -->
