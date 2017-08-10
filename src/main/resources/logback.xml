@@ -1,30 +1,13 @@
 <configuration>
-	    <property name="LOG_PATH" value="log/application.log" />
-	    
-	  
-    
-<!--     <appender name="jsonAppender" class="ch.qos.logback.core.rolling.RollingFileAppender"> -->
-<!--         <File>${LOG_PATH}</File> -->
-<!--         <encoder class="net.logstash.logback.encoder.LogstashEncoder"/> -->
-<!--         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy"> -->
-<!--             <maxIndex>1</maxIndex> -->
-<!--             <fileNamePattern>${LOG_PATH}.%i</fileNamePattern> -->
-<!--         </rollingPolicy> -->
-<!--         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"> -->
-<!--             <MaxFileSize>1MB</MaxFileSize> -->
-<!--         </triggeringPolicy> -->
-<!--     </appender> -->
-
-   <!--  <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
-       <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
-			<encoder>
-				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-			</encoder>
-    </appender> -->
+	<jmxConfigurator/>
+	<property name="LOG_PATH" value="log/application.log" />
     
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender"> 
      <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
-     <encoder>
+    <!--  <encoder>
+	    <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
+	  </encoder> -->
+	   <encoder>
 	     <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} SpanId %X{X-B3-SpanId} TraceId %X{X-B3-TraceId} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
 	  </encoder>
 	</appender>
@@ -33,50 +16,27 @@
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
       <file>${LOG_PATH}</file>
       <append>true</append>
-      <encoder>
-         <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} SpanId %X{X-B3-SpanId} TraceId %X{X-B3-TraceId} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
+      <!--  <encoder>
+	     <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
+	  </encoder> -->
+	   <encoder>
+         <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} SpanId %X{X-B3-SpanId} TraceId %X{X-B3-TraceId}  CorrelationId %X{CorrelationId} - %msg%n</Pattern>
       </encoder>
    </appender>
     
-    
-<!--         <appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender"> -->
-<!--         <destination>52.7.102.164:5000</destination> -->
-
-<!--         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"> -->
-<!--             <providers> -->
-<!--                 <mdc/> MDC variables on the Thread will be written as JSON fields  -->
-<!--                 <context/> Outputs entries from logback's context                                -->
-<!--                 <version/> Logstash json format version, the @version field in the output -->
-<!--                 <logLevel/> -->
-<!--                 <loggerName/>         -->
-
-<!--                 <threadName/> -->
-<!--                 <message/> -->
-
-<!--                 <logstashMarkers/> Useful so we can add extra information for specific log lines as Markers  -->
-<!--                 <arguments/> or through StructuredArguments -->
-
-<!--                 <stackTrace/> -->
-<!--             </providers> -->
-<!--         </encoder> -->
-<!--     </appender> -->
-		<!-- <conversionRule conversionWord="syslogStart" converterClass="ch.qos.logback.classic.pattern.SyslogStartConverter"/> -->
- 		<appender name="STASH" class="net.logstash.logback.appender.LogstashSocketAppender">
-				<host>54.208.170.219</host>
-				 <port>25826</port>
-                 <customFields>{"appname":"emp-Timerecords-ms"}</customFields> 
-                <!-- <prefix class="ch.qos.logback.classic.PatternLayout">
+   <appender name="STASH" class="net.logstash.logback.appender.LogstashSocketAppender">
+		<host>54.208.170.219</host>
+		<port>25826</port>
+        <customFields>{"appname":"emp-chargecode-ms"}</customFields> 
+        <prefix class="ch.qos.logback.classic.PatternLayout">
        				<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} CorrelationId %X{CorrelationId} - %msg%n</Pattern>
-    		</prefix>  -->
-     	</appender>
+    	</prefix>
+   	</appender>
 
-<!--     <logger name="jsonLogger" additivity="false" level="DEBUG"> -->
-<!--         <appender-ref ref="jsonAppender"/> -->
-
-<!--     </logger> -->
     <root level="info">
          <appender-ref ref="FILE"/>
          <appender-ref ref="STASH"/>
          <appender-ref ref="consoleAppender"/>
     </root>
 </configuration>
+
