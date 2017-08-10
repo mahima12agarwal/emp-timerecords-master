@@ -1,5 +1,5 @@
 server:
   port: 8095
 app:
-  artifactId: emp_timerecords_v
+  artifactId: emp_timerecords
   version: 2.0

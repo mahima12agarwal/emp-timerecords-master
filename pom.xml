@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -27,11 +27,9 @@
 	</properties>
 
 	<dependencies>
-	 	
-		<!-- <dependency>  
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency> -->
+
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> 
+			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,43 +44,43 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		 <dependency>
-	        <groupId>org.springframework.data</groupId>
-	        <artifactId>spring-data-couchbase</artifactId>
-	        <!-- <version>2.1.4.RELEASE</version> -->
-    	</dependency>
-    	 <dependency>
-	        <groupId>com.couchbase.client</groupId>
-	        <artifactId>java-client</artifactId>
-	      <!--   <version>2.2.8</version> -->
-	    </dependency>
-    	 <dependency>
-    	 	<groupId>org.springframework.boot</groupId>
-    	 	<artifactId>spring-boot-devtools</artifactId>
-    	 </dependency>
-    	 
-    	 <dependency>
-   			 <groupId>org.springframework.boot</groupId>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-couchbase</artifactId>
+			<!-- <version>2.1.4.RELEASE</version> -->
+		</dependency>
+		<dependency>
+			<groupId>com.couchbase.client</groupId>
+			<artifactId>java-client</artifactId>
+			<!-- <version>2.2.8</version> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-              
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-		 	 <artifactId>spring-cloud-starter-hystrix</artifactId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-		
+
 		<dependency>
-    	 <groupId>org.springframework.cloud</groupId>
-   		  <artifactId>spring-cloud-starter-feign</artifactId> 
-   	 	
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+
 		</dependency>
-		
-			
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -98,93 +96,80 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<scope>provided</scope> 
+			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>net.logstash.logback</groupId>
-		    <artifactId>logstash-logback-encoder</artifactId>
-		    <version>4.8</version>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>4.8</version>
 		</dependency>
 		<dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${ch.qos.logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${ch.qos.logback.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-access</artifactId>
-            <version>${ch.qos.logback.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-    <groupId>org.jolokia</groupId>
-    <artifactId>jolokia-core</artifactId>
-</dependency>
-        <dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger2</artifactId>
-		   <version>2.6.1</version>
-		  </dependency>
-		  
-		  <dependency>
-		   <groupId>com.fasterxml.jackson.core</groupId>
-		   <artifactId>jackson-databind</artifactId>
-		   <version>2.5.0</version>
-		  </dependency>
-		  <dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger-ui</artifactId>
-		   <version>2.6.1</version>
-		  </dependency>
-		  
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${ch.qos.logback.version}</version>
+		</dependency>
 		<dependency>
-        	<groupId>au.com.dius</groupId>
-        	<artifactId>pact-jvm-consumer-junit_2.11</artifactId>
-        	<version>3.2.2</version>
-        </dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${ch.qos.logback.version}</version>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
-  			<groupId>org.springframework.cloud</groupId>
-  			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
-  		</dependency>
-  		
-  		<dependency> 
-			<groupId>org.jolokia</groupId> 
-			<artifactId>jolokia-core</artifactId> 
-		</dependency>  
-		  <!-- Mocking dependancy for JUNIT-->
-			<!-- <dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-core</artifactId>
-				<version>1.9.5</version>
-				<scope>test</scope>
-			</dependency>
-				<dependency>
-					<groupId>org.powermock</groupId>
-					<artifactId>powermock-module-junit4</artifactId>
-					<version>1.6.5</version>
-					<scope>test</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.powermock</groupId>
-					<artifactId>powermock-api-mockito</artifactId>
-					<version>1.6.5</version>
-					<scope>test</scope>
-				</dependency> 
-		   -->
-		  
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>${ch.qos.logback.version}</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>au.com.dius</groupId>
+			<artifactId>pact-jvm-consumer-junit_2.11</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
+		<!-- Mocking dependancy for JUNIT -->
+		<!-- <dependency> <groupId>org.mockito</groupId> <artifactId>mockito-core</artifactId> 
+			<version>1.9.5</version> <scope>test</scope> </dependency> <dependency> <groupId>org.powermock</groupId> 
+			<artifactId>powermock-module-junit4</artifactId> <version>1.6.5</version> 
+			<scope>test</scope> </dependency> <dependency> <groupId>org.powermock</groupId> 
+			<artifactId>powermock-api-mockito</artifactId> <version>1.6.5</version> <scope>test</scope> 
+			</dependency> -->
+
 	</dependencies>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -194,13 +179,8 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		<!-- <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-sleuth</artifactId>
-            <version>1.2.0.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency> -->
+			<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-sleuth</artifactId> 
+				<version>1.2.0.RELEASE</version> <type>pom</type> <scope>import</scope> </dependency> -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -209,93 +189,90 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				
-				<version>1.4.2.RELEASE</version>
 				<executions>
-	                <execution>
-	                    <goals>
-	                        <goal>build-info</goal>
-	                    </goals>
-	                </execution>
-            </executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
-	            <groupId>com.spotify</groupId>
-	            <artifactId>docker-maven-plugin</artifactId>
-	            <version>0.4.11</version>
-            <configuration>
-              <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-                <dockerDirectory>src/main/docker</dockerDirectory>
-                <entryPoint>src/main/docker/entrypoint.sh</entryPoint>
-                <resources>
-                    <resource>
-                        <targetPath>/</targetPath>
-                        <directory>${project.build.directory}</directory>
-                        <include>${project.build.finalName}.jar</include>
-                    </resource>
-                </resources>
-            </configuration>
-        </plugin>
-        
-        <plugin>
-      		  <groupId>org.apache.maven.plugins</groupId>
-       		  <artifactId>maven-surefire-plugin</artifactId>
-       		 <version>2.18</version>
-       		 <configuration>
-        		 <systemPropertyVariables>
-           			 <!-- <pact.rootDir>C:\Users\j.chandra.mali\Documents\pactbroker_poc</pact.rootDir> -->
-           			 <pact.rootDir>.</pact.rootDir>
-            		<buildDirectory>${project.build.directory}</buildDirectory>
-             	  </systemPropertyVariables>
-       		 </configuration>
-      	</plugin>
-      	
-      	<!-- add Git commit information -->
-        <plugin>
-			    <groupId>pl.project13.maven</groupId>
-			    <artifactId>git-commit-id-plugin</artifactId>
-			    <version>2.1.13</version>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.11</version>
+				<configuration>
+					<imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<entryPoint>src/main/docker/entrypoint.sh</entryPoint>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
 			</plugin>
-		<!-- ends here -->
-      	
-      	 <!-- Added for git check-in info -->
-<!--         <plugin> -->
-<!-- 			    <groupId>pl.project13.maven</groupId> -->
-<!-- 			    <artifactId>git-commit-id-plugin</artifactId> -->
-<!-- 			    <version>2.2.1</version> --> 
-<!-- 			<configuration> -->
-<!--                  <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> --> 
-<!-- 					  <skip>true</skip> -->
-<!--                 more config here as you see fit -->
-<!--             </configuration> -->
-<!-- 		</plugin> -->
-	</plugins>
-  </build>
-    
-  <profiles>
-   <profile>
-    <id>pact_test</id>
-    <activation>
-      <activeByDefault>true</activeByDefault>
-    </activation>
-    <build>
-      <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-       		<artifactId>maven-surefire-plugin</artifactId>
-       		 <version>2.18</version>
-          <configuration>
-          <excludes>
-            <excluded>**/*PactTest.java</excluded>
-          <!--   <excluded>**/TimeRecordsEmployeeDetailsPactTest.java</excluded> -->
-          </excludes>
-          </configuration>
-        </plugin>
-       
-      </plugins>
-    </build>
-  </profile>  
-  </profiles>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<systemPropertyVariables>
+						<!-- <pact.rootDir>C:\Users\j.chandra.mali\Documents\pactbroker_poc</pact.rootDir> -->
+						<pact.rootDir>.</pact.rootDir>
+						<buildDirectory>${project.build.directory}</buildDirectory>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
+			<!-- add Git commit information -->
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>2.1.13</version>
+			</plugin>
+			<!-- ends here -->
+
+			<!-- Added for git check-in info -->
+			<!-- <plugin> -->
+			<!-- <groupId>pl.project13.maven</groupId> -->
+			<!-- <artifactId>git-commit-id-plugin</artifactId> -->
+			<!-- <version>2.2.1</version> -->
+			<!-- <configuration> -->
+			<!-- <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> -->
+			<!-- <skip>true</skip> -->
+			<!-- more config here as you see fit -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>pact_test</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.18</version>
+						<configuration>
+							<excludes>
+								<excluded>**/*PactTest.java</excluded>
+								<!-- <excluded>**/TimeRecordsEmployeeDetailsPactTest.java</excluded> -->
+							</excludes>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 
 </project>
