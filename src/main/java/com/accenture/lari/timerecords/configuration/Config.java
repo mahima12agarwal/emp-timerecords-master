@@ -25,7 +25,8 @@ import feign.RequestTemplate;
  *
  */
 @Configuration
-@EnableCouchbaseRepositories(basePackages = {"com.accenture.lari.timerecords" })
+@EnableCouchbaseRepositories
+//(basePackages = {"com.accenture.lari.timerecords" })
 public class Config extends AbstractCouchbaseConfiguration {
 	
 	@Value("${couchbaseDB.url}")

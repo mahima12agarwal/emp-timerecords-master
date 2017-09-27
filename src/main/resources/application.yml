@@ -6,4 +6,4 @@ app:
   
   # CouchBase DB URL
 couchbaseDB:
-  url: http://http://54.236.23.163:8091
+  url: http://52.7.102.164:8091
