@@ -14,6 +14,8 @@ import org.springframework.data.couchbase.repository.config.EnableCouchbaseRepos
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 
+import com.couchbase.client.java.env.CouchbaseEnvironment;
+
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 
@@ -28,6 +30,8 @@ public class Config extends AbstractCouchbaseConfiguration {
 	
 	@Value("${couchbaseDB.url}")
 	private String couchbaseDBUrl; 
+	
+
 	
     @Override
     protected List<String> getBootstrapHosts() {

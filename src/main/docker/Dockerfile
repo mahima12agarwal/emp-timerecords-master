@@ -4,7 +4,6 @@ MAINTAINER Mahima Agarwal  <mahima.agarwal@gmail.com>
 VOLUME /tmp
 ADD emp_timerecords-2.0.jar  app.jar
 RUN sh -c 'touch /app.jar'
-EXPOSE 8095
 ENV JAVA_OPTS="-Xmx256m"
 
 #COPY entrypoint.sh entrypoint.sh

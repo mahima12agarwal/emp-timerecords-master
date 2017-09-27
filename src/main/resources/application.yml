@@ -3,3 +3,7 @@ server:
 app:
   artifactId: emp_timerecords
   version: 2.0
+  
+  # CouchBase DB URL
+couchbaseDB:
+  url: http://http://54.236.23.163:8091
