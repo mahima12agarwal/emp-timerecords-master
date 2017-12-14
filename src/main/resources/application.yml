@@ -7,3 +7,11 @@ app:
   # CouchBase DB URL
 couchbaseDB:
   url: http://52.7.102.164:8091
+  
+spring:
+  zipkin:
+    base-url: ${ZIPKIN_URI:http://zipkin:8096}
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
