@@ -15,9 +15,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+//import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.stereotype.Component;
 
 import com.accenture.lari.utils.GatewayHeaderFilter;
@@ -37,13 +37,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableSwagger2
-@EnableResourceServer
+//@EnableResourceServer
 @SpringBootApplication
 public class TimeRecordsApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(TimeRecordsApplication.class);
 
-	@Configuration
+	/*@Configuration
 	protected static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
 		@Override
@@ -62,7 +62,7 @@ public class TimeRecordsApplication {
 		filterRegBean.setUrlPatterns(Arrays.asList("/*"));
 
 		return filterRegBean;
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(TimeRecordsApplication.class, args);
