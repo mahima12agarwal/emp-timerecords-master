@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.couchbase.config.AbstractCouchbaseConfiguration;
 import org.springframework.data.couchbase.repository.config.EnableCouchbaseRepositories;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+//import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 
 import com.couchbase.client.java.env.CouchbaseEnvironment;
 
@@ -50,7 +50,7 @@ public class Config extends AbstractCouchbaseConfiguration {
         return "ACC@123*";
     }
   
-    @Bean    
+    /*@Bean    
     public RequestInterceptor requestTokenBearerInterceptor() {
 
         return new RequestInterceptor() {
@@ -70,5 +70,5 @@ public class Config extends AbstractCouchbaseConfiguration {
 
         };
 
-    }
+    }*/
 }
