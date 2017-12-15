@@ -14,8 +14,8 @@ eureka:
   client:   
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  #instance:
-    #prefer-ip-address: false
+  instance:
+    prefer-ip-address: true
     #hostname: timerecords      
 ---
 spring:
